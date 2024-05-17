@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>금지어 감지</title>
+<link rel="stylesheet" href="./css/input.css" />
+
+<style>
+    .borderStyle {
+        border:1px solid;
+        margin:5px;
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="title">
+        2024년도 미림 나락 퀴즈쇼 후기
+    </div>
+
+    <div class="container">
+        <div class="inputbox">
+            후기글 작성칸.
+            <textarea id="reviewTextarea" placeholder="후기글을 작성하세요." cols="50" rows="1"></textarea>
+            <div id="limitmessage"></div>
+        </div>
+
+        <div class="messagebox" id="messagebox">
+            <!-- <div class="information">
+                <div class="nickname"></div>
+                <div class="reviewOutput"></div>
+            </div> -->
+        <!-- js로 입력을 받을 때마다 생성하기 다른 것으로 -->
+        </div>
+    </div>
+
+    <div class="btnbox">
+        <button>결과보기</button>
+        <button>끝내기</button>
+        <button>질문추가</button>
+    </div>
+
+
+<script src="./js/inputtest.js"></script>
+
+</body>
+</html>
