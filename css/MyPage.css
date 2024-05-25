@@ -50,7 +50,7 @@ form{
     display: inline-block; /* 인라인 블록 요소로 설정하여 다른 인라인 요소와 함께 배치 */
     text-align:center;
     margin: 0; /*여백 제거 */
-    padding: 0;  /* 내부 여백 제거  */
+    padding: 0;  /* 내부 여백 제거 */
     border: none; 
     margin-top:30px;
 }
