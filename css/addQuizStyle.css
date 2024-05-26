@@ -1,0 +1,114 @@
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2열 구성 */
+    grid-template-rows: auto auto auto auto auto; /* 5행 구성 */
+    gap: 10px;
+    max-width: 600px;
+    margin: 15px auto 10px auto;
+}
+
+/* 질문 입력 칸 */
+#question {
+    width: 90%;
+    grid-column: span 2;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    justify-self: center;
+    background-color: #ccc;
+    text-align: center;
+    color: black;
+}
+
+/* 학번 입력 칸 */
+#student_id {
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    justify-self: center; /* 가운데 정렬 */
+    background-color: white;
+    text-align: center;
+    color: black;
+    grid-column: span 2;
+    justify-self: center;
+}
+
+/* 항목 입력 칸 */
+.op {
+    width: 90%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #ccc;
+    text-align: center;
+    justify-self: center;
+}
+
+/* 항목 위치 */
+#option1 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#option2 {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#option3 {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#option4 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+/* 제출 버튼 */
+button {
+    width:100px;
+    height:30px;
+    padding: 0px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    cursor: pointer;
+    grid-column: span 2;
+    justify-self: center;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h5 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 9pt;
+}
+
+hr{
+    width: 600px;
+    background-color: black;
+}
+
+#hr1{
+    margin: 0px auto 0px auto;
+}
+
+#hr2{
+    grid-column: span 2;
+    margin: 10px 0;
+}
