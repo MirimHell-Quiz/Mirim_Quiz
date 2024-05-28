@@ -1,0 +1,36 @@
+input {
+    width: 500px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+  }
+span {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column; /* 컨텐츠를 수직으로 정렬 */
+}
+
+form {
+    text-align: center;
+    margin-top: 20px; /* form 위 여백 추가 */
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+}
