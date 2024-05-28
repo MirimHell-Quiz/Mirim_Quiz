@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html { 
+    background: url("../src/img/background.png") no-repeat center fixed; 
+    background-size: cover;
+}
+
+@font-face {
+    font-family: "GamtanRoad-Thin";
+    src: url("../src/fonts/감탄로드돋움체\ Thin.ttf"); /* 폰트파일 불러오기 */
+}
+@font-face {
+    font-family: "GamtanRoad-Regular";
+    src: url("../src/fonts/감탄로드돋움체\ Regular.ttf"); /* 폰트파일 불러오기 */
+}
+@font-face {
+    font-family: "GamtanRoad-Bold";
+    src: url("../src/fonts/감탄로드돋움체\ Bold.ttf"); /* 폰트파일 불러오기 */
+}
+
+.neon {
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem #F40000, 0 0 0.8rem #F40000, 0 0 2.8rem #F40000, inset 0 0 1.3rem #F40000;
+    border: 5px solid #FFF0F0;
+}
+
+.neon-text-1{
+    text-shadow: 0 0 7px #e76565, 0 0 10px #e76565, 0 0 21px #e76565, 0 0 42px #F40000, 0 0 82px #F40000, 0 0 92px #F40000, 0 0 102px #F40000, 0 0 151px #F40000;
+    font-family: "GamtanRoad-Bold";
+    color:transparent;
+    -webkit-text-stroke: 0.3px #FFF0F0;
+    font-weight: bold;
+}
+
+.neon-text-2{
+    text-shadow: 0 0 7px #e76565, 0 0 10px #e76565, 0 0 21px #e76565, 0 0 42px #F40000, 0 0 82px #F40000, 0 0 92px #F40000, 0 0 102px #F40000, 0 0 151px #F40000;
+    font-family: "GamtanRoad-Regular";
+    color: #FFF0F0;
+}
+

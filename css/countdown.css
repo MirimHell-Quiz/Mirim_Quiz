@@ -6,12 +6,12 @@
   transform: translateZ(0);
   width: 100%;
   border-radius: 100px;
-  border: 4px solid #ff0080;
+  /* border: 4px solid #ff0080; */
 }
 
 .progress-bar__bar {
   border-radius: 100px;
-  background-color: #ff0080;
+  background-color: #ffffff;
   bottom: 0;
   left: 0;
   position: absolute;
