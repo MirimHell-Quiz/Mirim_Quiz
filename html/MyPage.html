@@ -5,79 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyPage</title>
+    <link rel="stylesheet" href="MyPage.css">
     <style>
-        h1{
-            text-align:center;
-        }
-        .Page{
-             text-align:center;
-        }
        
-        .Answer-sheet{/*답변지*/
-            margin-top:50px;
-            font-size: 30px;
-            border-radius: 500px;
-            padding: 35px 284px;
-            background-color: rgb(216, 216, 216);
-        }
-        .Answer-sheet:hover{
-            background-color: gray;
-        }
-        .question{/*질문페이지*/
-            background-color: white;
-            margin-top:25px; /*여백*/
-            margin-top:50px;
-            font-size: 30px;
-            border-radius: 500px;
-            padding: 35px 200px;
-        }
-        .question:hover{
-            background-color: gray;
-        }
-        .Returning{
-            background-color: rgb(216, 216, 216);
-            margin-top:25px; /*여백*/
-            margin-top:50px;
-            font-size: 20px;
-            border-radius: 500px;
-            padding: 30px 100px;
-        }
-        .Returning:hover{
-            background-color: gray;
-        }
-        .class{ /*답변 받는 곳*/  
-            /*상자*/
-            text-align: center;
-            width: 40px; /* 원하는 너비 값으로 설정 */
-            height: 2px; /* 원하는 높이 값으로 설정 */
-            padding: 20px;
-            border: 3px solid #000000;
-            margin-right:50px;
-        }
-        form{
-            display: inline-block; /* 인라인 블록 요소로 설정하여 다른 인라인 요소와 함께 배치 */
-            text-align:center;
-            margin: 0; /*여백 제거 */
-            padding: 0;  /* 내부 여백 제거  */
-            border: none; 
-            margin-top:30px;
-        }
-        p{
-            text-align: center;
-            vertical-align: middle;
-            display: inline-block;  /*인라인 블록 요소로 설정하여 박스로 만듦 */
-            padding: 10px; /* 내부 여백 설정 */
-            border: 3px solid #000000; /* 테두리 설정 */ 
-            margin: 0; /* 여백 제거 */
-        }
-        .container{
-            text-align: center;
-            margin-top: 30px; 
-        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container"> 
         <h1>마이페이지</h1>
         <div class="from">
             <form>
@@ -98,10 +32,10 @@
     
     <script>
         function moveToPage(){
-            window.location.href="https://www.naver.com/";//답변지 페이지 링크
+            window.location.href="https://www.naver.com/";//답변지 페이지 링크  
         }
         function moveQuestion(){
-            window.location.href="#";//내가 만든 질문 페이지 링크
+            window.location.href="#";//내가 만든 질문 페이지 링크  
         }
         function moveReturning(){
             window.location.href="#";//돌아가기페이지 링크

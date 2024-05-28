@@ -2,15 +2,12 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 let id = parseInt(urlParams.get('id')); // Convert ID to integer
 
-// 버튼 클릭 시간을 기록할 변수
-let isButtonClicked = false;
-
 //id 를 기준으로 퀴즈를 차례대로 불러옴
 function loadQuiz(id) {
     buttonClicked = false;
-    isButtonClicked = false; // 새로운 문제를 로드할 때 변수 초기화
     const quiz = Quiz_date.find(quiz => quiz.id === id);
     //Quiz_date배열에서 있는 id가 지금 받은 아이디와 일치하냐 체크
+
 
     //맞다면
     if (quiz) {
@@ -35,7 +32,7 @@ function loadQuiz(id) {
     } else {
         console.error('Quiz not found for ID:', id);
     }
-    setTimeout(checkTimeout, 10000);
+    setTimeout(checkTimeout, 8000);
 }
 
 loadQuiz(id); // Initial load with the received ID
@@ -51,6 +48,10 @@ for (let i = 0; i < 4; i++) {
     document.querySelector(`.button${i + 1}`).addEventListener('click', handleButtonClick2);
 }
 
+
+// 버튼 클릭 시간을 기록할 변수
+let isButtonClicked = false;
+
 // 버튼 클릭 이벤트 처리 함수
 function handleButtonClick2() {
     // 버튼이 클릭되었음을 표시
@@ -64,7 +65,7 @@ function checkTimeout() {
     // 버튼이 클릭되지 않았을 때 경고 창에 '2' 텍스트를 표시
     if (!isButtonClicked) {
         const warningText = document.querySelector('.warning-window-div-2 p');
-        warningText.textContent = '2';
+        warningText.textContent = 'sdfsdf';
         showWarningWindow();
     }
 }
@@ -81,6 +82,7 @@ function showWarningWindow() {
         const warningText = document.querySelector('.warning-window-div-2 p');
         warningText.textContent = '1';
     }
+    
 }
 
 // 버튼 클릭 이벤트 리스너 등록
@@ -93,15 +95,16 @@ buttons.forEach(button => {
 document.addEventListener('keydown', function(event) {
     let eventDiv = document.querySelector('.warning-window-div-1');
     if (event.key === 'Enter') {
-        if (eventDiv.style.display == 'block') {
+        if (eventDiv .style.display == 'block') {
             console.log("!!");
-            eventDiv.style.display = 'none';
+            eventDiv .style.display = 'none';
             document.querySelector('.container').style.filter = 'none';
             event.preventDefault();
             handleButtonClick();
         }
     }
 });
+
 
 // 모든 버튼에 클릭 이벤트 리스너 추가
 document.querySelectorAll('button').forEach(function(button) {
@@ -110,3 +113,5 @@ document.querySelectorAll('button').forEach(function(button) {
         document.querySelector('.container').style.filter = 'blur(5px)';
     });
 });
+
+
