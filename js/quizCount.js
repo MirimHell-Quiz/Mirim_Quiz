@@ -38,25 +38,39 @@ function handleButtonClick() {
     loadQuiz(id);
 }
 
-function showWarningWindow(text) {
+function showWarningWindow(text1, text2) {
     const warningWindow = document.querySelector('.warning-window-div-1');
-    const warningText = document.querySelector('.warning-window-div-2 p');
+    const warningText1 = document.querySelector('.warning-text-1');
+    const warningText2 = document.querySelector('.warning-text-2');
     const container = document.querySelector('.container');
-
-    warningText.textContent = text;
+    
+    warningText1.innerHTML = text1.replace(/\n/g, '<br>');
+    warningText2.textContent = text2;
     warningWindow.style.display = 'block';
-    container.style.filter = 'blur(4px)';
+    container.style.filter = 'blur(20px)';
 }
 
 function clickButton() {
     isButtonClicked = true;
-    showWarningWindow('1');
+    const warningMessage1 = `아..{닉네임} 님은.. 000을 고르셨군요...
+    000은 어디에서 매우 중요한 역할을 하고 있는데 말이죠..
+    000은 필요도 없다.. 이런 말씀이시군요 잘 알겠습니다..`;
+    const warningMessage2 = `Lorem ipsum dolor sit amet consectetur. Adipiscing quis sollicitudin aenean phasellus.`;
+    
+    let noAnswer = document.querySelector('.no-answer');
+    noAnswer.style.display = 'block';
+    showWarningWindow(warningMessage1, warningMessage2);
     stopCountdown(); // countdown.js에 있는 stopCountdown 함수 호출
 }
 
 function noClickButton() {
     if (!isButtonClicked) {
-        showWarningWindow('2');
+        const warningMessage1 = `아... {닉네임}님은.. 아무것도 고르지 못하셨군요.
+        모든 답항이 필요도 없다..  고를 가치도 없는 것들이다..
+        이런 말씀이시군요 잘 알겠습니다..`;
+        const warningMessage2 = `※ 시간안에 아무것도 고르지 않으셨으므로 미리 공지한 벌칙이 실시 될 예정입니다 참고해 주세요 ※`;
+        
+        showWarningWindow(warningMessage1, warningMessage2);
         stopCountdown();
     }
 }
