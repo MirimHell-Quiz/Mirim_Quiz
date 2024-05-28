@@ -6,17 +6,62 @@
     <title>Document</title>
 
     <style>
-        
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+            margin-top: 130px;
+        }
+
+        .maintext {
+            font-size: 35px;
+        }
+
+        .caution {
+            margin-top: 100px;
+            font-size: smaller;
+        }
+
+        .btnbox {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        button {
+            width: 350px;
+            height: 80px;
+            text-align: center;
+            border-radius: 50px;
+            margin: 0 170px;
+            font-size: 30px;
+            background-color: rgb(228, 228, 228);
+        }
+
+        button:hover {
+            background-color: rgb(208, 208, 208);
+        }
+
+        .start,.back {
+            display :inline-block;
+        }
     </style>
+    <gitmoji [rename] : 🔥/>
 </head>
 <body>
-    <div>
-        저희는 본 결과에 책임 지지 않으며....
-        어쩌고 저쩌고 시간이 지나면 실명이 공개 될 위험이 있습니다
-        그래도 하시겠습니까?
-    </div>
-    <div>
-        화면을 넘길 땐, enter키나 클릭 하면 넘어갑니다. 다들 아시죠?
+    <div class="container">
+        <div class="maintext">
+            저희는 본 결과에 책임 지지 않으며....<br>
+            어쩌고 저쩌고 시간이 지나면 실명이 공개 될 위험이 있습니다<br>
+            그래도 하시겠습니까?<br>
+        </div>
+    
+        <div class="caution">
+            화면을 넘길 땐, enter키나 클릭 하면 넘어갑니다. 다들 아시죠?
+        </div>
     </div>
     <div class="btnbox">
         <button class="start">네, 시작하겠습니다</button>
@@ -27,7 +72,7 @@
 <script>
     document.querySelector('.start').addEventListener('click', function() {
         // Navigate to test.html with ID as query parameter
-        window.location.href = 'test.html?id=1';
+        window.location.href = 'Quiz.html?id=1';
     });
 </script>
 
