@@ -1,38 +1,60 @@
-h1{
+ h1{
     text-align:center;
+    font-family: 'GamtanRoad';
+    color: #fff0f0; 
+    text-shadow: 0 0 5px #f40000; 
+    animation: neon-flicker 1s infinite alternate;
 }
 .Page{
      text-align:center;
 }
 
 .Answer-sheet{/*답변지*/
+    font-family: 'GamtanRoad';
     margin-top:50px;
     font-size: 30px;
     border-radius: 500px;
     padding: 35px 284px;
-    background-color: rgb(216, 216, 216);
+    background-color: transparent;
+    color: #fff0f0; 
+    text-shadow: 0 0 5px #f40000; 
+    animation: neon-flicker 1s infinite alternate;
+    border-color: #fff0f0;
+    box-shadow: 0 0 5px #f40000;
 }
 .Answer-sheet:hover{
     background-color: gray;
 }
 .question{/*질문페이지*/
-    background-color: white;
     margin-top:25px; /*여백*/
+    font-family: 'GamtanRoad';
     margin-top:50px;
     font-size: 30px;
     border-radius: 500px;
     padding: 35px 200px;
+    background-color: transparent;
+    color: #fff0f0; 
+    text-shadow: 0 0 5px #f40000; 
+    animation: neon-flicker 1s infinite alternate;
+    border-color: #fff0f0;
+    box-shadow: 0 0 5px #f40000;
 }
 .question:hover{
     background-color: gray;
 }
 .Returning{
-    background-color: rgb(216, 216, 216);
     margin-top:25px; /*여백*/
+    font-family: 'GamtanRoad';
     margin-top:50px;
     font-size: 20px;
     border-radius: 500px;
     padding: 30px 100px;
+    background-color: transparent;
+    color: #fff0f0; 
+    text-shadow: 0 0 5px #f40000; 
+    animation: neon-flicker 1s infinite alternate;
+    border-color: #fff0f0;
+    box-shadow: 0 0 5px #f40000;
 }
 .Returning:hover{
     background-color: gray;
