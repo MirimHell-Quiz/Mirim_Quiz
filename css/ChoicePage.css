@@ -1,4 +1,16 @@
-img{
+@font-face {
+    font-family: "GamtanRoad-Thin";
+    src: url("../src/fonts/감탄로드돋움체\ Thin.ttf");
+}
+@font-face {
+    font-family: "GamtanRoad-Regular";
+    src: url("../src/fonts/감탄로드돋움체\ Regular.ttf");
+}
+@font-face {
+    font-family: "GamtanRoad-Bold";
+    src: url("../src/fonts/감탄로드돋움체\ Bold.ttf");
+}
+     img{
     margin-top:0px;
     display: block !important;
 margin: 0 auto !important;
@@ -8,32 +20,51 @@ margin: 0 auto !important;
     text-align:center;
 }
 .Start{/*시작  */
+    font-family: 'GamtanRoad';
     margin-top:10px; 
     font-size: 30px;
     border-radius: 500px;
     padding: 25px 180px;
-    background-color: rgb(216, 216, 216);
+    background-color: transparent;
+    color: #fff0f0; 
+    text-shadow: 0 0 5px #f40000; 
+    animation: neon-flicker 1s infinite alternate;
+    border-color: #fff0f0;
+    box-shadow: 0 0 5px #f40000;
 }
 .My{/*마이페이지*/
+    font-family: 'GamtanRoad';
     margin-top:50px;
     font-size: 30px;
     border-radius: 500px;
     padding: 25px 104px;
-   background-color: white;
+    background-color: transparent;
+    color: #fff0f0; 
+    text-shadow: 0 0 5px #f40000; 
+    animation: neon-flicker 1s infinite alternate;
+    border-color: #fff0f0;
+    box-shadow: 0 0 5px #f40000;
+
 }
 .Friend{/*친구들의 질문보기 */
+    font-family: 'GamtanRoad';
     margin-top:50px;
     font-size: 30px;
     border-radius: 500px;
     padding: 25px 94px;
-    background-color: white;
+    background-color: transparent;
+    color: #fff0f0; 
+    text-shadow: 0 0 5px #f40000; 
+    animation: neon-flicker 1s infinite alternate;
+    border-color: #fff0f0;
+    box-shadow: 0 0 5px #f40000;
 }
 .Start:hover{
-    background-color: gray;
+    background-color: #fff0f0;
 }
 .My:hover{
-    background-color: gray;
+    background-color: #fff0f0;
 }
 .Friend:hover{
-    background-color: gray;
+    background-color: #fff0f0;
 }
