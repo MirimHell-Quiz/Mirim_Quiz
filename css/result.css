@@ -1,0 +1,124 @@
+#first-question-div{
+
+}
+
+.container {
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title-div {
+    width: 100%;
+    height: 100px;
+    font-size: 34px;
+    position: relative;
+}
+
+.title-text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.question-div{
+    padding-bottom: 300px;
+    padding-top:100px;
+}
+
+.question {
+    text-align: left;
+    font-size: 30px;
+}
+
+.container-text {
+    height: 150px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.problem_text {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line {
+    border: 5px solid black;
+}
+
+.container-button {
+    margin-top: 50px;
+}
+
+.btn {
+    width: 300px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 20px 50px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.result-div {
+    position: relative;
+    margin-top: 300px;
+}
+
+.result-div-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.result {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 200px;
+    border-radius: 50px;
+    margin: 15px 15px 15px 15px;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: transparent;
+    display: inline-block;
+    text-align: left;
+}
+
+.result2-1 {
+    position: absolute;
+    height: 100%;
+    background-color: #d3d3d3;
+    padding-left: 20px;
+    font-size: 27px;
+    line-height: 97px;
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #767676;
+    font-family: "GamtanRoad-Regular";
+}
+
+.result-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    font-weight: lighter;
+    font-size: 30px;
+    font-family: "GamtanRoad-Regular";
+}
