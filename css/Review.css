@@ -3,18 +3,22 @@ body {
     height: 100%;
 }
 
+
 .title {
     margin-top: 50px;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
+   
 }
+
 
 .container {
     width: 80%;
     margin: 0 auto;
     margin-top: 60px;
 }
+
 
 .inputbox,
 .information {
@@ -23,6 +27,12 @@ body {
     border-bottom: 2px solid black;
     padding: 30px 0px 30px 0px ;
 }
+
+
+.information {
+    margin: 40px auto;
+}
+
 
 textarea {
     resize: none;
@@ -33,10 +43,12 @@ textarea {
     border-radius: 0 7px 7px 7px;
 }
 
+
 #reviewTextarea::-webkit-scrollbar {
     display: none;
     /*사이트 스크롤 제거*/
 }
+
 
 #limitmessage {/*금지어 경고문*/
     display: none;
@@ -44,14 +56,23 @@ textarea {
 }
 
 
+
+
 .messagebox{
     margin: 0 auto;
 }
+
 
 .nickname {
     display:inline-block;
     border: 1px solid black;
     margin-bottom: 20px;
+}
+
+
+.nickname,
+.reviewOutput {
+    margin: 10px 10px;
 }
 
 
@@ -63,9 +84,11 @@ textarea {
     font-size: larger;
 }
 
+
 .btnbox {
     text-align : center;
 }
+
 
 button {
     width: 200px;
