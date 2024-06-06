@@ -3,9 +3,24 @@ form {
     grid-template-columns: 1fr 1fr; /* 2열 구성 */
     grid-template-rows: auto auto auto auto auto; /* 5행 구성 */
     gap: 10px;
-    max-width: 600px;
+    max-width: 1200px;
     margin: 15px auto 10px auto;
 }
+
+/* 맨 위 글자들 */
+#quiz-add-text-h1{
+    margin-top:70px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size:40px;
+}
+#quiz-add-text-h3{
+    padding-top:20px;
+    text-align: center;
+    margin-top: 0;
+    font-size: 15pt;
+}
+
 
 /* 질문 입력 칸 */
 #question {
@@ -13,34 +28,27 @@ form {
     grid-column: span 2;
     padding: 10px;
     border-radius: 20px;
-    border: 1px solid #ccc;
     box-sizing: border-box;
+    margin-top:20px;
     justify-self: center;
-    background-color: #ccc;
     text-align: center;
     color: black;
+    border:none;
+    border-right:0px;
+    border-top:0px;
+    boder-left:0px;
+    boder-bottom:0px;
 }
 
-/* 학번 입력 칸 */
-#student_id {
-    width: 30%;
-    padding: 10px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    justify-self: center; /* 가운데 정렬 */
-    background-color: white;
-    text-align: center;
-    color: black;
-    grid-column: span 2;
-    justify-self: center;
-}
 
 /* 항목 입력 칸 */
 .op {
     width: 90%;
-    padding: 10px;
-    border-radius: 20px;
+    height: 180px;
+    border-radius: 50px;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 10px 20px 10px;
+    border-radius: 50px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     background-color: #ccc;
@@ -70,45 +78,18 @@ form {
 }
 
 /* 제출 버튼 */
-button {
-    width:100px;
-    height:30px;
-    padding: 0px;
-    border-radius: 20px;
-    background-color: white;
-    color: black;
-    border: solid 1px black;
+#quiz-add-button {
+    width:200px;
+    border-radius: 50px;
+    background-color: transparent;
     cursor: pointer;
+    padding:30px; 
     grid-column: span 2;
     justify-self: center;
+    font-size:20px;
 }
-
-button:hover {
-    background-color: black;
-    color: white;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-h5 {
-    text-align: center;
-    margin-top: 0;
-    font-size: 9pt;
-}
-
-hr{
-    width: 600px;
-    background-color: black;
-}
-
-#hr1{
-    margin: 0px auto 0px auto;
-}
-
-#hr2{
-    grid-column: span 2;
-    margin: 10px 0;
+#quiz-add-button:hover{
+    background-color: #fff0f0;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    cursor: pointer;
 }
