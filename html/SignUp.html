@@ -5,29 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/SignUp.css">
+    <link rel="stylesheet" href="../css/basic-style.css">
 </head>
 <body>
 
-    <h1>Sign up Form</h1>
+    <div class="logo-div">  
+        <img src="../src/img/Mirim Narak Quiz Show logo.png" class="logo-img">
+    </div>
+
+    <h1 class="neon-text-1">회원가입</h1>
     <form id="signupForm" action="../php/SignUp.php" method="post">
         <div>
-            <span>이름</span> 
-            <input type="text" name="user_name" placeholder="10글자 내로 작성하세요">
-        </div>
-        <br><br>
-        <div>
-            <span>학번</span> 
-            <input type="text" name="user_stuid" placeholder="10글자 내로 작성하세요">
+            <input type="text" name="user_name" class="neon-div-2" placeholder="닉네임을 입력해주세요.">
         </div>
         <br>
-        <!-- <div id="nicknameField">
-            <span>닉네임</span> 
-            <input type="text" name="user_nickname" placeholder="10글자 내로 작성하세요">
-            <button type="button" onclick="generateNickname()">닉네임 추천</button>
-        </div> -->
         <br>
-        <button type="submit">회원가입</button>
+        <button type="submit" class="neon-div-1 neon-text-2 signup-button">회원가입</button>
     </form>
 
     <script>
