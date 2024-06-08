@@ -1,36 +1,42 @@
+body{
+    text-align: center;
+}
+.logo-div-1{
+    width:100%;
+    display: block;
+}
+.logo-img{
+    width:40%;
+}
 input {
-    width: 500px;
-    height: 32px;
+    width: 700px;
+    height: 70px;
     font-size: 15px;
     border: 0;
-    border-radius: 15px;
+    border-radius: 100px;
     outline: none;
     padding-left: 10px;
-    background-color: rgb(233, 233, 233);
+    margin-top:20px;
+    text-align: center;
   }
-span {
-    font-size: 20px;
-    font-weight: 200;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    flex-direction: column; /* 컨텐츠를 수직으로 정렬 */
-}
-
 form {
     text-align: center;
     margin-top: 20px; /* form 위 여백 추가 */
 }
 
-form div {
-    margin-bottom: 10px;
+.signup,
+.login{
+    margin-top:25px; 
+    margin:50px 30px 50px 30px;
+    font-size: 20px;
+    border-radius: 500px;
+    padding: 30px 100px;
+    background-color: transparent;
 }
-
-button {
-    margin-top: 10px;
+.signup:hover,
+.signup:hover{
+    background-color: #fff0f0;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    cursor: pointer;
+    color: black;
 }

@@ -1,37 +1,49 @@
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-let id = parseInt(urlParams.get('id'));
-
+let id = 1;
 let isButtonClicked = false;
 
 function loadQuiz(id) {
     isButtonClicked = false;
-    const quiz = Quiz_date.find(quiz => quiz.id === id);
 
-    if (quiz) {
-        const problemText = document.querySelector('.problem_text');
-        problemText.textContent = quiz.problem;
+    fetch('load_question.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `id=${id}`
+    })
+    .then(response => response.json())
+    .then(quiz => {
+        if (quiz) {
+            const problemText = document.querySelector('.problem_text');
+            problemText.textContent = quiz.Question;
 
-        const buttons = [];
+            document.querySelector('.button1').textContent = quiz.Answer1;
+            document.querySelector('.button2').textContent = quiz.Answer2;
+            document.querySelector('.button3').textContent = quiz.Answer3;
+            document.querySelector('.button4').textContent = quiz.Answer4;
 
-        for (let i = 1; i <= 4; i++) {
-            buttons.push(document.querySelector(`.button${i}`));
-            buttons[i - 1].textContent = quiz[`choice${i}`];
+            document.querySelector('.button1').onclick = () => submitAnswer(1, quiz);
+            document.querySelector('.button2').onclick = () => submitAnswer(2, quiz);
+            document.querySelector('.button3').onclick = () => submitAnswer(3, quiz);
+            document.querySelector('.button4').onclick = () => submitAnswer(4, quiz);
+
+            startQuizCountdown();
+        } else {
+            console.error('Quiz not found for ID:', id);
         }
+    })
+    .catch(error => console.error('Error loading quiz:', error));
+}
 
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].addEventListener('click', function() {
-                console.log(`Clicked button ${i + 1}. Value:`, quiz[`choice${i + 1}`]);
-                clickButton();
-            });
-        }
-
-        startQuizCountdown();
-    } else {
-        console.error('Quiz not found for ID:', id);
-        // 퀴즈가 끝났을 때 다른 페이지로 이동
-        window.location.href = '../html/result.html'; // 이동할 페이지의 URL
-    }
+function submitAnswer(answerId, quiz) {
+    isButtonClicked = true;
+    showWarningWindow(quiz[`NoAnswer${answerId}`], `Lorem ipsum dolor sit amet consectetur. Adipiscing quis sollicitudin aenean phasellus.`);
+    stopCountdown();
+    setTimeout(() => {
+        document.querySelector('.warning-window-div-1').style.display = 'none';
+        document.querySelector('.container').style.filter = 'none';
+        handleButtonClick();
+    }, 2000);
 }
 
 function handleButtonClick() {
@@ -51,23 +63,10 @@ function showWarningWindow(text1, text2) {
     container.style.filter = 'blur(20px)';
 }
 
-function clickButton() {
-    isButtonClicked = true;
-    const warningMessage1 = `아..{닉네임} 님은.. 000을 고르셨군요...
-    000은 어디에서 매우 중요한 역할을 하고 있는데 말이죠..
-    000은 필요도 없다.. 이런 말씀이시군요 잘 알겠습니다..`;
-    const warningMessage2 = `Lorem ipsum dolor sit amet consectetur. Adipiscing quis sollicitudin aenean phasellus.`;
-    
-    let noAnswer = document.querySelector('.no-answer');
-    noAnswer.style.display = 'block';
-    showWarningWindow(warningMessage1, warningMessage2);
-    stopCountdown(); // countdown.js에 있는 stopCountdown 함수 호출
-}
-
 function noClickButton() {
     if (!isButtonClicked) {
         const warningMessage1 = `아... {닉네임}님은.. 아무것도 고르지 못하셨군요.
-        모든 답항이 필요도 없다..  고를 가치도 없는 것들이다..
+        모든 답항이 필요도 없다.. 고를 가치도 없는 것들이다..
         이런 말씀이시군요 잘 알겠습니다..`;
         const warningMessage2 = `※ 시간안에 아무것도 고르지 않으셨으므로 미리 공지한 벌칙이 실시 될 예정입니다 참고해 주세요 ※`;
         
@@ -85,17 +84,5 @@ document.addEventListener('keydown', function(event) {
         handleButtonClick();
     }
 });
-
-document.querySelector('.warning-window-div-1').addEventListener('click', function(event) {
-    let eventDiv = document.querySelector('.warning-window-div-1');
-    if (eventDiv.style.display === 'block') {
-        eventDiv.style.display = 'none';
-        document.querySelector('.container').style.filter = 'none';
-        event.preventDefault();
-        handleButtonClick();
-    }
-});
-
-
 
 loadQuiz(id); // 초기 로드

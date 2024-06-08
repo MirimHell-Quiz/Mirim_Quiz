@@ -6,7 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/start.css">
     <link rel="stylesheet" href="../css/basic-style.css">
-    <gitmoji [rename] : 🔥/>
 </head>
 <body>
     <div class="container">
@@ -28,9 +27,15 @@
 
 <script>
     document.querySelector('.start').addEventListener('click', function() {
-        // Navigate to test.html with ID as query parameter
-        window.location.href = 'Quiz.html?id=1';
+        // ID 1로 퀴즈 시작 페이지로 이동
+        window.location.href = "../php/quiz.php?id=1";
     });
+
+    document.querySelector('.back').addEventListener('click', function() {
+        // 취소 버튼 클릭 시, 사용자 정의 작업 수행 (예: 다른 페이지로 이동)
+        alert('퀴즈를 취소하셨습니다.');
+    });
+
 </script>
 
 </html>
