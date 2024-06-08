@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>금지어 감지</title>
-<link rel="stylesheet" href="../css/Review.css" />
 <link rel="stylesheet" href="../css/basic-style.css"/>
+<link rel="stylesheet" href="../css/Review.css" />
 </head>
 <body>
 
@@ -16,9 +16,9 @@
 
 
     <div class="container">
-        <div class="inputbox neon">
-            후기글 작성칸.
-            <textarea id="reviewTextarea" placeholder="후기글을 작성하세요." cols="50" rows="1"></textarea>
+        <div class="inputbox neon-div-1">
+            <h2 class="text">후기글 작성칸</h2>
+            <textarea class="neon-div-2" id="reviewTextarea" placeholder="후기글을 작성하세요." cols="50" rows="1"></textarea>
             <div id="limitmessage"></div>
         </div>
 
@@ -34,9 +34,9 @@
 
 
     <div class="btnbox">
-        <button>결과보기</button>
-        <button>끝내기</button>
-        <button>질문추가</button>
+        <button class="neon-div-1 neon-text-2">결과보기</button>
+        <button class="neon-div-1 neon-text-2" onclick="location.href='finish.html'">끝내기</button>
+        <button class="neon-div-1 neon-text-2">질문추가</button>
     </div>
 
 <script src="../js/Review.js"></script>

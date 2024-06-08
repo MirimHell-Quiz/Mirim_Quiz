@@ -12,6 +12,10 @@ body {
    
 }
 
+.text {
+    margin-left: 10px;
+    color: aliceblue;
+}
 
 .container {
     width: 80%;
@@ -19,17 +23,19 @@ body {
     margin-top: 60px;
 }
 
+.inputbox {
+    border-radius: 15px;
+}
 
 .inputbox,
 .information {
     align-items: center;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
     padding: 30px 0px 30px 0px ;
 }
 
 
 .information {
+    border-radius: 15px;
     margin: 40px auto;
 }
 
@@ -56,32 +62,47 @@ textarea {
 }
 
 
-
-
 .messagebox{
     margin: 0 auto;
 }
 
 
-.nickname {
-    display:inline-block;
-    border: 1px solid black;
+
+/* Add the following CSS rule to your review.css file */
+.nicknamebox {
+    display: flex;
+    flex-direction: row;
     margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.base_nickname {
+    width: 60px;
+    text-align: center;
+    border: 1px;
+    padding: 0 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.user_nickname{
+    border: 1px;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
 }
 
 
-.nickname,
 .reviewOutput {
     margin: 10px 10px;
 }
 
 
 .reviewOutput{
-    background-color: #D9D9D9;
+    background-color: white;
     border: 1px solid black;
     border-radius: 0 7px 7px 7px;
     height: 30px;
     font-size: larger;
+    color: black;
 }
 
 
