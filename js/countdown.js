@@ -1,4 +1,3 @@
-// countdown.js 파일
 const progressBarElem = document.querySelector('.progress-bar__bar');
 const audio = document.getElementById('audio_play');
 let isAudioPlayed = false;
@@ -67,5 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
             stopCountdownAndAudio();
             showContainerDiv();
         });
+    });
+
+    // .warning-window-div-1 클릭 이벤트 추가
+    document.querySelector('.warning-window-div-1').addEventListener('click', (event) => {
+        resetCountdownAndAudio();
     });
 });

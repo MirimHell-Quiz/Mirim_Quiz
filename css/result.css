@@ -119,3 +119,25 @@
     font-size: 30px;
     font-family: "GamtanRoad-Regular";
 }
+
+/* 제출 버튼 */
+.button-div{
+    width:100%;
+    text-align: center;
+    margin-bottom:50px;
+}
+.final-button {
+    width:200px;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    padding:30px; 
+    grid-column: span 2;
+    justify-self: center;
+    font-size:20px;
+}
+.final-button:hover{
+    background-color: #fff0f0;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    cursor: pointer;
+}

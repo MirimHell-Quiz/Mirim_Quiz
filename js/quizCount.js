@@ -1,4 +1,3 @@
-// quizCount.js 파일
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 let id = parseInt(urlParams.get('id'));
@@ -30,6 +29,8 @@ function loadQuiz(id) {
         startQuizCountdown();
     } else {
         console.error('Quiz not found for ID:', id);
+        // 퀴즈가 끝났을 때 다른 페이지로 이동
+        window.location.href = '../html/result.html'; // 이동할 페이지의 URL
     }
 }
 
@@ -77,14 +78,24 @@ function noClickButton() {
 
 document.addEventListener('keydown', function(event) {
     let eventDiv = document.querySelector('.warning-window-div-1');
-    if (event.key === 'Enter') {
-        if (eventDiv.style.display == 'block') {
-            eventDiv.style.display = 'none';
-            document.querySelector('.container').style.filter = 'none';
-            event.preventDefault();
-            handleButtonClick();
-        }
+    if (event.key === 'Enter' && eventDiv.style.display === 'block') {
+        eventDiv.style.display = 'none';
+        document.querySelector('.container').style.filter = 'none';
+        event.preventDefault();
+        handleButtonClick();
     }
 });
+
+document.querySelector('.warning-window-div-1').addEventListener('click', function(event) {
+    let eventDiv = document.querySelector('.warning-window-div-1');
+    if (eventDiv.style.display === 'block') {
+        eventDiv.style.display = 'none';
+        document.querySelector('.container').style.filter = 'none';
+        event.preventDefault();
+        handleButtonClick();
+    }
+});
+
+
 
 loadQuiz(id); // 초기 로드
