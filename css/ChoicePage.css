@@ -1,70 +1,105 @@
+body {
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+}
 @font-face {
     font-family: "GamtanRoad-Thin";
-    src: url("../src/fonts/감탄로드돋움체\ Thin.ttf");
+    src: url("../src/fonts/감탄로드돋움체 Thin.ttf");
 }
 @font-face {
     font-family: "GamtanRoad-Regular";
-    src: url("../src/fonts/감탄로드돋움체\ Regular.ttf");
+    src: url("../src/fonts/감탄로드돋움체 Regular.ttf");
 }
 @font-face {
     font-family: "GamtanRoad-Bold";
-    src: url("../src/fonts/감탄로드돋움체\ Bold.ttf");
+    src: url("../src/fonts/감탄로드돋움체 Bold.ttf");
 }
-     img{
-    margin-top:0px;
+img {
+    margin-top: 0px;
+    margin-bottom: 10px; /* Reduce the space below the image */
     display: block !important;
-margin: 0 auto !important;
-
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
-.Page{
-    text-align:center;
+.Page {
+    text-align: center;
 }
-.Start{/*시작  */
-    font-family: 'GamtanRoad';
-    margin-top:10px; 
-    font-size: 30px;
-    border-radius: 500px;
-    padding: 25px 180px;
-    background-color: transparent;
-    color: #fff0f0; 
-    text-shadow: 0 0 5px #f40000; 
-    animation: neon-flicker 1s infinite alternate;
-    border-color: #fff0f0;
-    box-shadow: 0 0 5px #f40000;
-}
-.My{/*마이페이지*/
-    font-family: 'GamtanRoad';
-    margin-top:50px;
+.Start, .My, .Friend {
+    text-shadow: 0 0 7px #e76565, 0 0 10px #e76565, 0 0 21px #e76565, 0 0 42px rgb(244, 0, 0, 0.47), 0 0 82px rgb(244, 0, 0, 0.47), 0 0 92px rgb(244, 0, 0, 0.47), 0 0 102px rgb(244, 0, 0, 0.47), 0 0 151px rgb(244, 0, 0, 0.47);
+font-family: "GamtanRoad-Regular";
     font-size: 30px;
     border-radius: 500px;
     padding: 25px 104px;
     background-color: transparent;
     color: #fff0f0; 
-    text-shadow: 0 0 5px #f40000; 
+    
     animation: neon-flicker 1s infinite alternate;
-    border-color: #fff0f0;
-    box-shadow: 0 0 5px #f40000;
-
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47), inset 0 0 1.3rem rgb(244, 0, 0, 0.47);
+border: 5px solid #FFF0F0;
 }
-.Friend{/*친구들의 질문보기 */
-    font-family: 'GamtanRoad';
-    margin-top:50px;
+.Start:hover, .My:hover, .Friend:hover {
+    background-color: #fff0f0;
+}
+.Start {
+    margin-top: 10px; /* Reduce the space above the Start button */
+    padding: 25px 180px; /* Different padding for Start button */
+}
+.My {
+    margin-top: 50px;
+}
+.Friend {
+    margin-top: 50px;
+    padding: 25px 94px; /* Different padding for Friend button */
+}body {
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+@font-face {
+    font-family: "GamtanRoad-Thin";
+    src: url("../src/fonts/감탄로드돋움체 Thin.ttf");
+}
+@font-face {
+    font-family: "GamtanRoad-Regular";
+    src: url("../src/fonts/감탄로드돋움체 Regular.ttf");
+}
+@font-face {
+    font-family: "GamtanRoad-Bold";
+    src: url("../src/fonts/감탄로드돋움체 Bold.ttf");
+}
+img {
+    margin-top: 0px;
+    margin-bottom: 10px; /* Reduce the space below the image */
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.Page {
+    text-align: center;
+}
+.Start, .My, .Friend {
+    text-shadow: 0 0 7px #e76565, 0 0 10px #e76565, 0 0 21px #e76565, 0 0 42px rgb(244, 0, 0, 0.47), 0 0 82px rgb(244, 0, 0, 0.47), 0 0 92px rgb(244, 0, 0, 0.47), 0 0 102px rgb(244, 0, 0, 0.47), 0 0 151px rgb(244, 0, 0, 0.47);
+font-family: "GamtanRoad-Regular";
     font-size: 30px;
     border-radius: 500px;
-    padding: 25px 94px;
+    padding: 25px 104px;
     background-color: transparent;
     color: #fff0f0; 
-    text-shadow: 0 0 5px #f40000; 
+    
     animation: neon-flicker 1s infinite alternate;
-    border-color: #fff0f0;
-    box-shadow: 0 0 5px #f40000;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47), inset 0 0 1.3rem rgb(244, 0, 0, 0.47);
+border: 5px solid #FFF0F0;
 }
-.Start:hover{
+.Start:hover, .My:hover, .Friend:hover {
     background-color: #fff0f0;
 }
-.My:hover{
-    background-color: #fff0f0;
+.Start {
+    margin-top: 10px; /* Reduce the space above the Start button */
+    padding: 25px 180px; /* Different padding for Start button */
 }
-.Friend:hover{
-    background-color: #fff0f0;
+.My {
+    margin-top: 50px;
+}
+.Friend {
+    margin-top: 50px;
+    padding: 25px 94px; /* Different padding for Friend button */
 }

@@ -1,0 +1,42 @@
+
+.Page{
+     text-align:center;
+}
+
+.logo-div-1{
+    width:100%;
+    display: block;
+}
+.logo-img{
+    width:30%;
+}
+.buttons{
+    display: block;
+}
+
+.menu-button{
+    margin-top:50px;
+    font-size: 20px;
+    border-radius: 500px;
+    width:600px;
+    padding: 15px 0 15px 0;
+    background-color: transparent;
+}
+.menu-button:hover{
+    background-color: #fff0f0;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    cursor: pointer;
+}
+.Returning{
+    margin-top:25px; 
+    margin:50px 0 50px 0;
+    font-size: 20px;
+    border-radius: 500px;
+    padding: 30px 100px;
+    background-color: transparent;
+}
+.Returning:hover{
+    background-color: #fff0f0;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    cursor: pointer;
+}

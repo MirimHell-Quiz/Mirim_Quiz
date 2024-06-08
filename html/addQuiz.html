@@ -6,32 +6,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>퀴즈 항목 추가</title>
-    <link rel="stylesheet" href="addQuizStyle.css">
+    <link rel="stylesheet" href="../css/addQuizStyle.css">
+    <link rel="stylesheet" href="../css/basic-style.css">
 </head>
 
 <body>
-    <h1>퀴즈 항목 추가</h1>
-    <h5>질문을 적어주시면 관계자들이 검토한 후 참고하도록 하겠습니다.</h5>
-    <hr id="hr1">
+    <h1 class="neon-text-1" id="quiz-add-text-h1">퀴즈 항목 추가</h1>
+    <h3 class="neon-text-2" id="quiz-add-text-h3">질문을 적어주시면 관계자들이 검토한 후 참고하도록 하겠습니다.</h5>
      <form method="post" action="addQuizInsert.php">
 
-        <input type="text" id="student_id" name="student_id" placeholder="학번을 입력해주세요." required>
 
         <!-- 질문 입력 칸 -->
-        <input type="text" id="question" name="question" placeholder="질문을 입력해주세요." required>
-
-        <hr id="hr2">
+        <input type="text" id="question" class="neon-div-2" name="question" placeholder="질문을 입력해주세요." required>
 
         <!-- 항목 입력 칸 -->
-        <input type="text" id="option1" class="op" name="option1" placeholder="항목을 입력해주세요." required>
+        <input type="text" id="option1" class="op neon-div-2" name="option1" placeholder="항목을 입력해주세요." required>
 
-        <input type="text" id="option2" class="op" name="option2" placeholder="항목을 입력해주세요." required>
+        <input type="text" id="option2" class="op neon-div-2" name="option2" placeholder="항목을 입력해주세요." required>
 
-        <input type="text" id="option3" class="op" name="option3" placeholder="항목을 입력해주세요." required>
+        <input type="text" id="option3" class="op neon-div-2" name="option3" placeholder="항목을 입력해주세요." required>
 
-        <input type="text" id="option4" class="op" name="option4" placeholder="항목을 입력해주세요." required>
+        <input type="text" id="option4" class="op neon-div-2" name="option4" placeholder="항목을 입력해주세요." required>
 
-        <br><button type="submit">추가하기</button>
+        <br><button type="submit" id="quiz-add-button" class="neon-div-1 neon-text-2">추가하기</button>
     </form> 
 </body>
 

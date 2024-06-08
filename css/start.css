@@ -43,3 +43,14 @@ button:hover {
 .start, .back {
     display :inline-block;
 }
+
+.start:hover{
+    background-color: #fff0f0;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    cursor: pointer;
+}
+.back:hover{
+    background-color: #fff0f0;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    cursor: pointer;
+}

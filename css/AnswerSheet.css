@@ -1,3 +1,6 @@
+body {
+    width: 100%;
+}
 
 .container {
     width: 90%;
@@ -20,9 +23,33 @@
     transform: translate(-50%, -50%);
 }
 
-.question-div{
+.user-div-all{
+    width:100%;
+    margin-top:100px;
+}
+.user-div{
+    display: inline-block;
+    margin: 0 30px 0 30px;
+    font-size:20px;
+}
+.user-div>div{
+    display:inline-block;
+}
+.user-div-1{
+    padding: 20px 30px 20px 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.user-div-2{
+    margin-left:-12px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px 40px 20px 40px;
+}
+
+.question-div {
     padding-bottom: 300px;
-    padding-top:100px;
+    padding-top: 100px;
 }
 
 .question {
@@ -120,24 +147,23 @@
     font-family: "GamtanRoad-Regular";
 }
 
-/* 제출 버튼 */
-.button-div{
-    width:100%;
-    text-align: center;
-    margin-bottom:50px;
+.returning-div {
+    display: flex;
+    justify-content: center;
 }
-.final-button {
-    width:200px;
-    border-radius: 50px;
+
+.returning-button {
+    margin-top: 25px;
+    margin: 50px 0 50px 0;
+    font-size: 20px;
+    border-radius: 500px;
+    padding: 30px 100px;
     background-color: transparent;
-    cursor: pointer;
-    padding:30px; 
-    grid-column: span 2;
-    justify-self: center;
-    font-size:20px;
 }
-.final-button:hover{
+
+.returning-button:hover {
     background-color: #fff0f0;
-    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem rgba(244, 0, 0, 0.47), 0 0 0.8rem rgba(244, 0, 0, 0.47), 0 0 2.8rem rgba(244, 0, 0, 0.47);
     cursor: pointer;
 }
+
