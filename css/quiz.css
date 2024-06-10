@@ -19,9 +19,8 @@ body {
 
 .problem_text {
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
-    /* margin-top:45px; */
     line-height: 150px;
 }
 
@@ -68,7 +67,6 @@ button:hover {
     left: 0;
     width: 100%;
     z-index: 2;
-    /* 변경 */
     display: none;
 }
 
