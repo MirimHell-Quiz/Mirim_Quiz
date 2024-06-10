@@ -17,26 +17,12 @@
     <h1 class="neon-text-1">회원가입</h1>
     <form id="signupForm" action="../php/SignUp.php" method="post">
         <div>
-            <input type="text" name="user_name" class="neon-div-2" placeholder="닉네임을 입력해주세요.">
+            <input type="text" name="user_id" class="neon-div-2" placeholder="아이디를 입력해주세요.">
         </div>
         <br>
         <br>
         <button type="submit" class="neon-div-1 neon-text-2 signup-button">회원가입</button>
     </form>
 
-    <script>
-        function generateNickname() {
-            // API에서 닉네임 가져오기
-            fetch('https://nickname.hwanmoo.kr/?format=json&count=1')
-            .then(response => response.json())
-            .then(data => {
-                const nicknameField = document.getElementById('nicknameField');
-                const nicknameInput = nicknameField.querySelector('input[name="user_nickname"]');
-                // 가져온 닉네임을 입력 필드에 설정
-                nicknameInput.value = data.words[0];
-            })
-            .catch(error => console.error('Error fetching nickname:', error));
-        }
-    </script>
 </body>
 </html>
