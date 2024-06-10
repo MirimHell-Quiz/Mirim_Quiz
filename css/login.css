@@ -6,7 +6,7 @@ body{
     display: block;
 }
 .logo-img{
-    width:40%;
+    width:48%;
 }
 input {
     width: 700px;
@@ -33,10 +33,11 @@ form {
     padding: 30px 100px;
     background-color: transparent;
 }
-.signup:hover,
+.login:hover,
 .signup:hover{
     background-color: #fff0f0;
     box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    text-shadow: none;
     cursor: pointer;
     color: black;
 }
