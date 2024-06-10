@@ -1,3 +1,10 @@
+const $bottomBtn = document.querySelector(".moveBottomBtn");
+
+// 버튼 클릭 시 페이지 하단으로 이동
+$bottomBtn.onclick = () => {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+};
+
 document.addEventListener("DOMContentLoaded", function() {
     var textarea = document.getElementById("reviewTextarea");   // html에서 값 받기
     var limitmessage = document.getElementById("limitmessage");
@@ -24,17 +31,16 @@ document.addEventListener("DOMContentLoaded", function() {
     textarea.addEventListener("keypress", function(event) { // textarea에 키 이벤트 추가
         if (event.key === "Enter") {
             event.preventDefault(); // Enter 키의 기본 동작 방지 (새 줄 추가)
-
+    
             var text = textarea.value;
             var prohibitedWords = Object.values(textarea_date[0]); // 금지어 배열
             var foundProhibitedWords = prohibitedWords.filter(function(word) {
                 return text.includes(word);
             });
-
+    
             if (foundProhibitedWords.length > 0) { // 발견된 금지어가 있으면
                 var prohibitedWordString = foundProhibitedWords.join(", ");
-                limitmessage.textContent = "해당 글자는 금지어입니다 => " + prohibitedWordString;
-                limitmessage.style.display = "block"; // 메시지를 보이도록 설정
+                alert("해당 글자는 금지어입니다 => " + prohibitedWordString); // Alert message instead of limitmessage
             } else { // 금지어가 없으면
                 limitmessage.textContent = ""; // 금지어 경고문 삭제
                 limitmessage.style.display = "none"; // 메시지 숨기기
@@ -44,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     });
+    
 
     function printReview(text) { // 리뷰 출력 함수
         const messagebox = document.getElementById("messagebox");
@@ -56,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="base_nickname neon-div-1 neon-text-2">닉네임</div>
                         <div class="user_nickname neon-div-1 neon-text-2">${nickname}</div>
                     </div>
-                    <div class="reviewOutput">${text}</div>
+                    <div class="reviewOutput neon-div-2">${text}</div>
                 </div>
             `;
             messagebox.insertAdjacentHTML("beforeend", messageHTML);

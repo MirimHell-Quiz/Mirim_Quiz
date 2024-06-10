@@ -1,9 +1,9 @@
 <?php
 
 $host='localhost';
-$id='test';
-$pass='1111';
-$db='testdb';
+$id='';
+$pass='';
+$db='';
 $post=3307;
 
 $conn=mysqli_connect($host,$id,$pass,$db,$post);

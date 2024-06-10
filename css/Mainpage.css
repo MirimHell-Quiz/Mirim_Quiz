@@ -2,7 +2,6 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
@@ -16,7 +15,6 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     font-size: 2rem;
     text-align: center;
@@ -33,7 +31,6 @@ body, html {
     position: relative;
     z-index: 2;
     height: 100vh; /* Ensure full height */
-    background-color: white; /* Add background color to separate from parallax */
     padding: 20px; /* Add padding to ensure space around image */
     box-sizing: border-box;
 }
@@ -45,11 +42,6 @@ body, html {
     cursor: pointer;
 }
 
-.content button img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-}
 
 .parallax::before {
     position: absolute;
