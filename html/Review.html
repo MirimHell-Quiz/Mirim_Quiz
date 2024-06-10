@@ -5,42 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>금지어 감지</title>
 <link rel="stylesheet" href="../css/basic-style.css"/>
-<link rel="stylesheet" href="../css/Review.css" />
+<link rel="stylesheet" href="../css/Review.css"/>
 </head>
+
 <body>
-
-
     <div class="title neon-text-1">
         2024년도 미림 나락 퀴즈쇼 후기
     </div>
 
-
     <div class="container">
         <div class="inputbox neon-div-1">
-            <h2 class="text">후기글 작성칸</h2>
-            <textarea class="neon-div-2" id="reviewTextarea" placeholder="후기글을 작성하세요." cols="50" rows="2"></textarea>
-            <div id="limitmessage"></div>
+            <h2 class="Review_textarea">후기글 작성칸</h2>
+            <textarea class="neon-div-2" id="reviewTextarea" placeholder="후기글을 작성하세요." cols="90" rows="3"></textarea>
+            <div id="limitmessage"></div>   <!-- 경고문 -->
         </div>
 
 
         <div class="messagebox" id="messagebox">
-            <!-- <div class="information">
-                <div class="nickname"></div>
-                <div class="reviewOutput"></div>
-            </div> -->
+          <!-- <div class="information neon-div-1">
+            <div class="nicknamebox">
+                <div class="base_nickname neon-div-1 neon-text-2">닉네임</div>
+                <div class="user_nickname neon-div-1 neon-text-2">${nickname}</div>
+            </div>
+            <div class="reviewOutput">${text}</div>
+        </div> -->
         <!-- js로 입력을 받을 때마다 생성하기 다른 것으로 -->
         </div>
     </div>
 
 
-    <div class="btnbox">
-        <button class="neon-div-1 neon-text-2">결과보기</button>
-        <button class="neon-div-1 neon-text-2" onclick="location.href='finish.html'">끝내기</button>
-        <button class="neon-div-1 neon-text-2">질문추가</button>
+    <div class="moveBottomBtn">
+        <img src="../src/img/down_button.png" alt="화면을 밑으로 내리는 버튼">
     </div>
 
-<script src="../js/Review.js"></script>
-
-
+    <div class="btnbox">
+        <button class="btns neon-div-1 neon-text-2">결과보기</button>
+        <button class="btns neon-div-1 neon-text-2" onclick="location.href='finish.html'">끝내기</button>
+        <button class="btns neon-div-1 neon-text-2">질문추가</button>
+    </div>
+    <script src="../js/Review.js"></script>
 </body>
 </html>
