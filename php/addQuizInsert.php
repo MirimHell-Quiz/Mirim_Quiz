@@ -35,4 +35,4 @@ if (mysqli_query($conn, $sql)) {
 }
 
 ?>
-<meta http-equiv='refresh' content='0;url=addQuizChoice.html'>
+<meta http-equiv='refresh' content='0;url=../html/Review.html'>
