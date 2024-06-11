@@ -11,14 +11,14 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT auto_increment AS id, Question AS problem, Answer1 AS choice1, Answer2 AS choice2, Answer3 AS choice3, Answer4 AS choice4 FROM AddQuiz";
+$sql = "SELECT id AS Answerid, Question1 AS Question1, Question2 AS Question2, Question3 AS Question3, Question4 AS Question4, Question5 AS Question5, Question6 AS Question6, Question7 AS Question7, Question8 AS Question8, Question9 AS Question9, Question10 AS Question10 FROM UserAnswer";
 $result = $conn->query($sql);
 
-$quizData = array();
+$answerData = array();
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        $quizData[] = $row;
+        $answerData[] = $row;
     }
 }
 
@@ -26,5 +26,5 @@ $conn->close();
 
 // JSON으로 변환하여 출력
 header('Content-Type: application/json');
-echo json_encode($quizData);
+echo json_encode($answerData);
 ?>
