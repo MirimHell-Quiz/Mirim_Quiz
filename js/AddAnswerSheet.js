@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     questionDiv.id = 'first-question-div';
                 }
 
+                const questionAndTextDiv = document.createElement('div');
+                questionAndTextDiv.classList.add('question-and-text-div');
+
                 const questionTitle = document.createElement('h3');
                 questionTitle.classList.add('question', 'neon-text-2');
                 questionTitle.textContent = `${quizItem.id}번`;
@@ -31,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 containerText.appendChild(problemText);
 
+                questionAndTextDiv.appendChild(questionTitle);
+                questionAndTextDiv.appendChild(containerText);
+
                 const resultDiv = document.createElement('div');
                 resultDiv.classList.add('result-div');
 
@@ -42,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     result.classList.add('result', 'neon-div-1');
 
                     const resultText = document.createElement('p');
-                    resultText.classList.add('result-text', `result-text-${index + 1}`);
+                    resultText.classList.add('result-text', 'neon-text-2', `result-text-${index + 1}`);
                     resultText.textContent = quizItem[choice];
 
                     result.appendChild(resultText);
@@ -50,8 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 resultDiv.appendChild(resultDiv2);
-                questionDiv.appendChild(questionTitle);
-                questionDiv.appendChild(containerText);
+                questionDiv.appendChild(questionAndTextDiv);
                 questionDiv.appendChild(resultDiv);
 
                 container.appendChild(questionDiv);

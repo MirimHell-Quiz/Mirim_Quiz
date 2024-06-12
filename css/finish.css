@@ -25,3 +25,11 @@ body, html {
     border-radius: 50px;
     font-size: 30px;
 }
+
+.return:hover{
+    background-color: #fff0f0;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    text-shadow: none;
+    color:#000;
+    cursor: pointer;
+}
