@@ -25,6 +25,8 @@
 .menu-button:hover{
     background-color: #fff0f0;
     box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    text-shadow: none;
+    color:#000;
     cursor: pointer;
 }
 .Returning{
@@ -38,5 +40,7 @@
 .Returning:hover{
     background-color: #fff0f0;
     box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    text-shadow: none;
+    color:#000;
     cursor: pointer;
 }

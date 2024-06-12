@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "1234";
-$dbname = "mysql";
+$username = "test";
+$password = "Osb01166";
+$dbname = "testdb";
 
 // 데이터베이스 연결 생성
 $conn = mysqli_connect($servername, $username, $password, $dbname);

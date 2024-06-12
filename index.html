@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Scroll Effect</title>
-    <link rel="stylesheet" href="../css/Mainpage.css">
+    <title>미림 퀴즈쇼</title>
+    <link rel="stylesheet" href="./css/basic-style.css">
+    <link rel="stylesheet" href="./css/Mainpage.css">
 </head>
+
 <body>
-    <div class="parallax">
-        <h2 id="Scroll">아래로 스크롤을 내리세요.</h2>
+    <div class="guide-div">
+        <h1 class="guide-text">스크롤을 해주세요.</h1>
+        <div id="triangle"></div>
     </div>
-    <div class="parallax">
-        <div class="content">
-            <a href="login.html">
-                <button>
-                    <img src="../src/img/Mirim Narak Quiz Show background.png" alt="Content Image">
-                </button>
-            </a>
-        </div>
+    
+    <div class="logo-div">
+        <a href="./html/login.html">
+            <img src="./src/img/Mirim Narak Quiz Show logo.png" class="logo-img">
+        </a>
+        <p class="guide-text-2">사진을 눌러주세요.</p>
     </div>
+    <div class="blank"></div>
+
+    <script src="./js/index.js"></script>
 </body>
+
 </html>

@@ -1,53 +1,48 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
+::-webkit-scrollbar {
+    display: none;
 }
 
-.parallax {
-    background-image: url('../src/img/background.png');
-    height: 100vh; /* Full height */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    font-size: 2rem;
+.guide-div, .logo-div {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    position: relative;
+    transition: opacity 1s, transform 1s;
+}
+.logo-div {
+    position: fixed;
+}
+
+.guide-div {
+    position: fixed;
+    opacity: 1;
     z-index: 1;
-    padding: 20px; /* Add padding to avoid overlap with content */
-    box-sizing: border-box;
+    font-family: 'GamtanRoad-Regular';
+    color: white;
 }
 
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-    height: 100vh; /* Ensure full height */
-    padding: 20px; /* Add padding to ensure space around image */
-    box-sizing: border-box;
-}
-
-.content button {
-    border: none;
-    background: transparent;
-    padding: 0;
+#triangle { 
+    width: 0;
+    height: 0;
+    border-top: 25px solid white;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    margin: 0 auto;
+    margin-top: 20px;
     cursor: pointer;
 }
 
+.logo-div {
+    opacity: 0;
+    transform: translate(-50%, 30%);
+    z-index: 0;
+}
 
-.parallax::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+.blank {
+    height: 1000px;
+}
+
+.guide-text-2 {
+    font-family: "GamtanRoad-Regular";
+    color: white;
 }

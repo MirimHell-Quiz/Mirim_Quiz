@@ -17,6 +17,7 @@ body {
 }
 
 .title-text {
+    width:100%;
     position: absolute;
     top: 100%;
     left: 50%;
@@ -48,8 +49,12 @@ body {
 }
 
 .question-div {
-    padding-bottom: 300px;
     padding-top: 100px;
+}
+
+.problem-and-question{
+    width:85%;
+    margin: 0 auto;
 }
 
 .question {
@@ -58,12 +63,15 @@ body {
 }
 
 .container-text {
+    width:100%;
     height: 150px;
     margin: 50px auto;
+    border-radius: 20px;
     position: relative;
 }
 
 .problem_text {
+    width: 86%;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
@@ -93,23 +101,16 @@ body {
 
 .result-div {
     position: relative;
-    margin-top: 300px;
 }
 
-.result-div-2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .result {
     position: relative;
     overflow: hidden;
-    width: 300px;
-    height: 200px;
-    border-radius: 50px;
-    margin: 15px 15px 15px 15px;
+    width: 500px;
+    height: 150px;
+    border-radius: 200px;
+    margin: 52px;
     font-size: 40px;
     font-weight: bold;
     background-color: transparent;
@@ -117,20 +118,6 @@ body {
     text-align: left;
 }
 
-.result2-1 {
-    position: absolute;
-    height: 100%;
-    background-color: #d3d3d3;
-    padding-left: 20px;
-    font-size: 27px;
-    line-height: 97px;
-    display: flex;
-    align-items: center;
-    font-weight: lighter;
-    font-size: 20px;
-    color: #767676;
-    font-family: "GamtanRoad-Regular";
-}
 
 .result-text {
     position: absolute;
@@ -146,6 +133,25 @@ body {
     font-size: 30px;
     font-family: "GamtanRoad-Regular";
 }
+
+.before-teacher {
+    display: block;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 5px;
+    width: 100%; 
+}
+
+.teacher {
+    display: block;
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+}
+.quiz_div{
+    margin-left:20px;
+}
+
 
 .returning-div {
     display: flex;
@@ -164,6 +170,8 @@ body {
 .returning-button:hover {
     background-color: #fff0f0;
     box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem rgba(244, 0, 0, 0.47), 0 0 0.8rem rgba(244, 0, 0, 0.47), 0 0 2.8rem rgba(244, 0, 0, 0.47);
+    text-shadow: none;
     cursor: pointer;
+    color:#000;
 }
 
