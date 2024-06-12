@@ -96,6 +96,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (userAnswers[questionKey] == answerIndex + 1) {
                         result.style.backgroundColor = '#FFF0F0';
                         resultText.style.color = '#000000';
+                        result.style.boxShadow = '0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47)';
+                    }
+                    else{
+                        resultText.style.color = '#FFFFFF';
                     }
 
                     result.appendChild(resultText);
