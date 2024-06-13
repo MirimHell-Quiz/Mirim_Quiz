@@ -3,7 +3,7 @@
 $conn = mysqli_connect('localhost', 'test', '1111', 'testdb', 3307);
 
 // 사용자 입력 값 가져오기
-$id = $_POST['user_id'];
+$id = mysqli_real_escape_string($conn, $_POST['user_id']);
 
 // API에서 닉네임 가져오기
 function getNickname() {
@@ -21,7 +21,7 @@ function getNickname() {
     $context  = stream_context_create($options);
     $result = file_get_contents($url, false, $context);
     if ($result === FALSE) {
-        die('Error fetching nickname');
+        die('닉네임을 가져오는 중 오류가 발생했습니다.');
     }
 
     $response = json_decode($result, true);
@@ -42,13 +42,16 @@ while (!isNicknameAvailable($conn, $nickname)) {
 }
 
 // SQL 쿼리 생성
-$sql = "INSERT INTO User (id, Nickname) VALUES ('$id', '$nickname')";
+$sql = "INSERT INTO User (id, Nickname) VALUES ('$id', '$nickname')"; 
 
 // 쿼리 실행
 if (mysqli_query($conn, $sql)) {
+    // 삽입된 직후의 StudentKey 가져오기
+    $studentKey = mysqli_insert_id($conn);
+    
     // 회원가입 성공 시 menu.html 페이지로 이동
     echo "<script>alert('회원가입이 완료되었습니다.');</script>";
-    echo "<script>window.location.href = '../html/menu.html';</script>";
+    echo "<script>window.location.href = '../html/menu.html?id=$studentKey';</script>";
 } else {
     // 회원가입 실패 시 실패 이유를 알림창에 표시
     echo "<script>alert('회원가입에 실패했습니다. 오류: " . mysqli_error($conn) . "');</script>";

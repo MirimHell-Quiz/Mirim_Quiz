@@ -25,17 +25,26 @@
     </div>
     
     <script>
-        function start(){
-            window.location.href="../html/start.html"; //답변지 페이지 링크  
+        // URL에서 id 값을 추출하는 함수
+        function getStudentKey() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
         }
-        function moveToPage(){
-            window.location.href="../html/AnswerSheet.html"; //답변지 페이지 링크  
+
+        // id 값을 추출
+        const studentKey = getStudentKey();
+
+        function start() {
+            window.location.href = `../html/start.html`; // 답변지 페이지 링크  
         }
-        function moveQuestion(){
-            window.location.href="../html/AddAnswerSheet.html"; //친구들의 질문 보기 링크  
+        function moveToPage() {
+            window.location.href = `../html/AnswerSheet.html?id=${studentKey}`; // 답변지 페이지 링크  
         }
-        function moveReturning(){
-            window.location.href="../html/MainPage.html"; //돌아가기페이지 링크
+        function moveQuestion() {
+            window.location.href = `../html/AddAnswerSheet.html`; // 친구들의 질문 보기 링크  
+        }
+        function moveReturning() {
+            window.location.href = `../html/MainPage.html`; // 돌아가기 페이지 링크
         }
     </script>
 </body>
