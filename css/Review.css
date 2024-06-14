@@ -38,18 +38,48 @@ body {
     padding: 10px 20px 10px 20px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    box-shadow: -5px -5px 10px rgb(244, 0, 0, 0.47), 0 5px 10px rgb(244, 0, 0, 0.47), inset -5px -5px 10px rgb(244, 0, 0, 0.47), inset 5px 5px 10px rgb(244, 0, 0, 0.47);
 }
 .user-div-2{
     margin-left:-12px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 10px 30px 10px 30px;
+    box-shadow: 5px -5px 10px rgb(244, 0, 0, 0.47), 0 5px 10px rgb(244, 0, 0, 0.47), inset 5px -5px 10px rgb(244, 0, 0, 0.47), inset 0 5px 10px rgb(244, 0, 0, 0.47);
 }
+.user-div-1,
+.user-div-2 {
+    position: relative;
+    z-index: 1;
+}
+
+
+.base_nickname {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -5px -5px 10px rgb(244, 0, 0, 0.47), 0 5px 10px rgb(244, 0, 0, 0.47), inset -5px -5px 10px rgb(244, 0, 0, 0.47), inset 5px 5px 10px rgb(244, 0, 0, 0.47);
+}
+
+.user_nickname {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 가운데 정렬 */
+    text-align: center;
+    margin-left: -4px;
+    padding: 10px 20px 10px 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 5px -5px 10px rgb(244, 0, 0, 0.47), 0 5px 10px rgb(244, 0, 0, 0.47), inset 5px -5px 10px rgb(244, 0, 0, 0.47), inset 0 5px 10px rgb(244, 0, 0, 0.47);
+}
+
 
 .inputbox,
 .information {
     align-items: center;
-    padding: 30px 0px 30px 0px ;
+    padding: 30px 0px 30px 0px;
 }
 
 
@@ -64,6 +94,7 @@ textarea {  /*후기 작성하는 칸*/
     margin-left: 50px;
     margin-top: 37px;
     font-size: 25px;
+    width:90%;
     border-radius: 0 35px 35px 35px;
     font-family: "GamtanRoad-Regular";
     padding:20px;
@@ -79,36 +110,24 @@ textarea {  /*후기 작성하는 칸*/
 .nicknamebox {
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
     margin-left: 50px;
-    height: 40px;
     font-size: 20px;
+    font-family: "GamtanRoad-Regular";
 }
 
-.base_nickname {
-    width: 70px;
-    text-align: center;
-    border: 1px;
-    padding: 10px 15px;
-    border-radius: 5px 0 0 5px;
-}
-
-.user_nickname{
-    border: 1px;
-    padding: 10px 30px;
-    border-radius: 0 5px 5px 0;
-}
 
 
 .reviewOutput{
-    border-radius: 0 35px 35px 35px;
-    height: 90px;
-    font-size: 25px;
-    width: 1180px;
-    color: black;
-    margin: 10px 10px;
+    resize: none;
     margin-left: 50px;
-
+    margin-top: 37px;
+    margin-bottom:20px;
+    font-size: 25px;
+    border-radius: 0 35px 35px 35px;
+    font-family: "GamtanRoad-Regular";
+    padding:20px;
+    height:50px;
+    width:90%;
     text-align: center; /* Center text horizontally */
     display: flex;
     align-items: flex-start; /* Align text to the left vertically */
@@ -120,15 +139,23 @@ textarea {  /*후기 작성하는 칸*/
 }
 
 .btns {
-    width: 310px;
-    height: 115px;
-    border-radius: 70px;
-    font-size: 40px;
-    font-weight: bold;
-    background-color:transparent; /*투명*/
-    margin: 60px 45px;
+    width:200px;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    padding:30px; 
+    grid-column: span 2;
+    justify-self: center;
+    font-size:20px;
+    margin: 40px 10px 50px 10px;
 }
-
+.btns:hover{
+    background-color: #fff0f0;
+    box-shadow: 0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47);
+    text-shadow: none;
+    color: #000;
+    cursor: pointer;
+}
 
 .moveBottomBtn {
     width: 100px;
