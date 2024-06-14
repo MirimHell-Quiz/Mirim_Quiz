@@ -1,5 +1,5 @@
 const progressBarElem = document.querySelector('.progress-bar__bar');
-// const audio = document.getElementById('audio_play');
+const audio = document.getElementById('audio_play');
 let isAudioPlayed = false;
 let countdownTimeout;
 
@@ -17,7 +17,7 @@ function stopCountdown() {
 function autoStart() {
     progressBarElem.classList.add('active');
     if (!isAudioPlayed) {
-        // audio.play();
+        audio.play();
         isAudioPlayed = true;
     }
     startCountdown();
@@ -28,8 +28,8 @@ function stopCountdownAndAudio() {
     progressBarElem.classList.remove('active');
     clearTimeout(countdownTimeout);
 
-    // audio.pause();
-    // audio.currentTime = 0;
+    audio.pause();
+    audio.currentTime = 0;
 }
 
 // 카운트다운과 오디오 재설정 함수
@@ -37,10 +37,10 @@ function resetCountdownAndAudio() {
     progressBarElem.classList.remove('active');
     clearTimeout(countdownTimeout);
 
-    // audio.pause();
-    // audio.currentTime = 0;
+    audio.pause();
+    audio.currentTime = 0;
 
-    // audio.play();
+    audio.play();
 
     setTimeout(autoStart, 10); // 10ms 후에 다시 시작하도록 설정
 }
@@ -53,12 +53,6 @@ function showContainerDiv() {
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(autoStart, 0);
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
-            resetCountdownAndAudio();
-        }
-    });
 
     const buttons = document.querySelectorAll('.container-button button');
     buttons.forEach(button => {

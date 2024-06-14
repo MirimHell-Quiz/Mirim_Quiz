@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const messageHTML = `
                 <div class="information neon-div-1">
                     <div class="nicknamebox">
-                        <div class="base_nickname neon-div-1 neon-text-2">닉네임</div>
+                        <div class="user-div-1 neon-div-1 neon-text-2">닉네임</div>
                         <div class="user_nickname neon-div-1 neon-text-2">${nickname}</div>
                     </div>
                     <div class="reviewOutput neon-div-2">${text}</div>
