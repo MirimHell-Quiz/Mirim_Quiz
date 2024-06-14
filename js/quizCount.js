@@ -3,6 +3,31 @@ let userId = "test101"; // 사용자 ID
 let isButtonClicked = false;
 let userAnswers = {}; // 사용자의 답변을 저장할 객체
 
+// URL에서 id 값을 추출하는 함수
+function getStudentKey() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('id');
+}
+
+// id 값을 추출하고 userId로 저장
+const studentKey = getStudentKey();
+    if (studentKey) {
+        userId = studentKey;
+    }
+
+// 추출한 id 값을 div에 표시하는 함수
+function displayStudentId(studentId) {
+    const studentIdDisplay = document.getElementById('studentIdDisplay');
+    studentIdDisplay.textContent = "학생 ID: " + studentId;
+}
+
+// 페이지 로드 후 실행되는 함수
+window.onload = function() {
+    // 학생 ID를 표시
+    displayStudentId(studentKey);
+};
+
+
 function loadQuestion() {
     let currentQuestion = Quiz_date[currentQuestionIndex];
     document.getElementById("question").innerHTML = currentQuestion.Question;
@@ -80,7 +105,7 @@ function showWarningWindow(text1, text2) {
 
     // text1 앞에 사용자 ID를 추가하고 warningText1 업데이트
     if (text1 !== undefined) {
-        warningText1.innerHTML = userId + ": " + text1.replace(/\n/g, '<br>');
+        warningText1.innerHTML = userId + " : " + text1.replace(/\n/g, '<br>');
     } else {
         warningText1.innerHTML = "알 수 없는 오류가 발생했습니다.";
     }

@@ -2,36 +2,30 @@
 $conn = mysqli_connect('localhost', 'root', '505015', 'testdb');
 
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("연결 실패: " . mysqli_connect_error());
 }
 
-$sql = "SELECT id AS Answerid, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10 FROM UserAnswer";
-$result = $conn->query($sql);
+$studentKey = $_GET['id']; // GET 요청을 통해 받은 경우
 
-$answerData = array();
-$nullFields = array();
+// 데이터베이스에서 학생 키에 해당하는 id를 가져옵니다.
+$query = "SELECT Nickname FROM User WHERE StudentKey = '$studentKey'";
+$result = mysqli_query($conn, $query);
 
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $answerData[] = $row;
-        foreach ($row as $key => $value) {
-            if (is_null($value)) {
-                $nullFields[] = array('id' => $row['Answerid'], 'field' => $key);
-            }
-        }
-    }
-}
-
-$conn->close();
-
-if (!empty($nullFields)) {
-    // null 값이 있는 경우 다른 페이지로 리디렉션
-    $nullFieldsEncoded = urlencode(json_encode($nullFields));
-    header("Location: http://localhost/mirim/html/test.html?nullFields=$nullFieldsEncoded");
+// 쿼리 실행 결과가 있으면 결과 반환합니다.
+if ($result && mysqli_num_rows($result) > 0) {
+    // 결과에서 Nickname 가져옵니다.
+    $row = mysqli_fetch_assoc($result);
+    $id = $row['Nickname'];
+    
+    // HTML 페이지로 리다이렉트하면서 Nickname URL 매개변수로 전달합니다.
+    header("Location: http://localhost/mirim/html/quiz.html?id=$id");
+    exit();
+} else {
+    // 학생 키가 일치하지 않는 경우, 오류 메시지를 포함하여 HTML 페이지로 리다이렉트합니다.
+    header("Location: http://localhost/mirim/html/quiz.html?error=1");
     exit();
 }
 
-// JSON으로 변환하여 출력
-header('Content-Type: application/json');
-echo json_encode($answerData);
+// MySQL 연결을 닫습니다.
+mysqli_close($conn);
 ?>
