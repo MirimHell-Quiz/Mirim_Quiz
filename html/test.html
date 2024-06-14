@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <div id="studentIdDisplay"></div> <!-- 학생 ID를 표시할 div 요소 -->
+    <script>
+        // URL에서 id 값을 추출하는 함수
+        function getStudentKey() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        // id 값을 추출
+        const studentKey = getStudentKey();
+
+        // 추출한 id 값을 div에 표시하는 함수
+        function displayStudentId(studentId) {
+            const studentIdDisplay = document.getElementById('studentIdDisplay');
+            studentIdDisplay.textContent = "학생 ID: " + studentId;
+        }
+
+        // 페이지 로드 후 실행되는 함수
+        window.onload = function() {
+            // 학생 ID를 표시
+            displayStudentId(studentKey);
+        };
+    </script>
+</body>
+</html>
