@@ -2,7 +2,8 @@
 session_start();
 
 // 디비 접속
-$conn = mysqli_connect('localhost', 'test', '1111', 'testdb', 3307);
+// $conn = mysqli_connect('localhost', 'test', '1111', 'testdb', 3307);
+$conn = mysqli_connect('localhost', 'test', 'Osb01166', 'testdb');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 사용자 입력 값 가져오기

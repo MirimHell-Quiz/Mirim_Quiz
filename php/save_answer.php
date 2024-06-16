@@ -3,14 +3,16 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
 // 데이터베이스 연결
-$host='localhost';
-$id='root';
-$pass='505015';
-$db='testdb';
+// $host='localhost';
+// $id='root';
+// $pass='505015';
+// $db='testdb';
 
-/* 여기문 진짜 어쩔 수 없어요 includ? 이걸로 쓰면 오류나요.. */
+// /* 여기문 진짜 어쩔 수 없어요 includ? 이걸로 쓰면 오류나요.. */
 
-$conn=mysqli_connect($host,$id,$pass,$db);
+// $conn=mysqli_connect($host,$id,$pass,$db);
+
+$conn = mysqli_connect('localhost', 'test', 'Osb01166', 'testdb');
 
 
 // JSON 형식으로 데이터를 받음

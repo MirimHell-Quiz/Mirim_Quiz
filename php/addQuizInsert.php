@@ -4,14 +4,20 @@ error_reporting( E_ALL );
 ini_set( "display_errors", 1 );
 
 // 데이터베이스 연결 설정
-$servername = "localhost";
-$username = "root";
-$password = "1234";
-$dbname = "mysql";
+// $servername = "localhost";
+// $username = "root";
+// $password = "1234";
+// $dbname = "mysql";
 
 
-// 데이터베이스 연결 생성
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+// // 데이터베이스 연결 생성
+// $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// include_once('./db_conn.php');
+
+$conn = mysqli_connect('localhost', 'test', 'Osb01166', 'testdb');
+
+
 if($conn) {
     echo "success";
 }

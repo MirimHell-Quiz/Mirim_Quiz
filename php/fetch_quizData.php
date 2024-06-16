@@ -1,11 +1,13 @@
 <?php
-$servername = "localhost";
-$username = "test";
-$password = "Osb01166";
-$dbname = "testdb";
+// $servername = "localhost";
+// $username = "test";
+// $password = "Osb01166";
+// $dbname = "testdb";
 
-// 데이터베이스 연결 생성
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+// // 데이터베이스 연결 생성
+// $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+$conn = mysqli_connect('localhost', 'test', 'Osb01166', 'testdb');
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());

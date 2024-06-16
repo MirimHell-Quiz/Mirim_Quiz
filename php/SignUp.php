@@ -1,6 +1,7 @@
 <?php
 // 디비접속
-$conn = mysqli_connect('localhost', 'test', '1111', 'testdb', 3307);
+// $conn = mysqli_connect('localhost', 'test', '1111', 'testdb', 3307);
+$conn = mysqli_connect('localhost', 'test', 'Osb01166', 'testdb');
 
 // 사용자 입력 값 가져오기
 $id = mysqli_real_escape_string($conn, $_POST['user_id']);
