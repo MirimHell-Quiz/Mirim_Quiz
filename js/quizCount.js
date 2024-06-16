@@ -69,7 +69,7 @@ function nextQuestion() {
         sendAnswersToServer(); // 모든 질문을 푼 후 서버로 답변 전송
 
         setTimeout(() => {
-            window.location.href = 'http://localhost/mirim/html/Result.html';
+            window.location.href = `http://localhost/MIRIM_QUIZ/html/Result.html?userId=${userId}`;
         }, 2000);
     }
 }
@@ -80,7 +80,7 @@ function sendAnswersToServer() {
         answers: userAnswers
     };
 
-    fetch('http://localhost/mirim/php/save_answer.php', {
+    fetch('http://localhost/MIRIM_QUIZ/php/save_answer.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -159,7 +159,7 @@ function noClickButton() {
 async function fetchData() {
     console.log("들어감");
     try {
-        const response = await fetch('http://localhost/mirim/php/test.php');
+        const response = await fetch('http://localhost/MIRIM_QUIZ/php/remember_name.php');
         if (!response.ok) {
             throw new Error('네트워크 응답에 문제가 있습니다.');
         }
