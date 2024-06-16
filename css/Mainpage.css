@@ -1,6 +1,21 @@
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+
+/* 웹킷 브라우저용 */
 ::-webkit-scrollbar {
     display: none;
 }
+
+/* 기타 브라우저용 */
+::-moz-scrollbar {
+    display: none;
+}
+
+::-ms-scrollbar {
+    display: none;
+}
+
 
 .guide-div, .logo-div {
     top: 50%;
