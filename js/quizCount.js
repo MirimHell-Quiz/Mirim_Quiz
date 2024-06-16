@@ -1,5 +1,5 @@
 let currentQuestionIndex = 0;
-let userId = "test101";
+let userId = "null";
 let isButtonClicked = false;
 let userAnswers = {};
 
@@ -14,14 +14,7 @@ if (studentKey) {
     userId = studentKey;
 }
 
-// 학생 ID를 표시하는 함수
-function displayStudentId(studentId) {
-    const studentIdDisplay = document.getElementById('studentIdDisplay');
-    studentIdDisplay.textContent = "학생 ID: " + studentId;
-}
-
 window.onload = function() {
-    displayStudentId(studentKey);
     fetchData();
     loadQuestion();
 };
@@ -34,6 +27,8 @@ function loadQuestion() {
     document.querySelector("#button-group2 .button2").innerHTML = currentQuestion.Answer2;
     document.querySelector("#button-group1 .button3").innerHTML = currentQuestion.Answer3;
     document.querySelector("#button-group2 .button4").innerHTML = currentQuestion.Answer4;
+
+    startCountdown(); // 문제를 로드할 때 카운트다운 시작
 }
 
 // 답변 제출 함수
@@ -58,14 +53,13 @@ function nextQuestion() {
     currentQuestionIndex++;
     if (currentQuestionIndex < Quiz_date.length) {
         loadQuestion();
-        isButtonClicked = false;
-        startCountdown();
+        isButtonClicked = false; // isButtonClicked 초기화
     } else {
         showWarningWindow("모든 문제를 푸셨습니다!", "");
         sendAnswersToServer();
 
         setTimeout(() => {
-            window.location.href = `http://localhost/MIRIM_QUIZ/html/Result.html?userId=${userId}`;
+            window.location.href = `http://localhost/MIRIM_QUIZ/html/Result.html?id=${userId}`;
         }, 4000);
     }
 }
@@ -102,7 +96,7 @@ function showWarningWindow(text1, text2) {
     const container = document.querySelector('.container');
 
     if (text1 !== undefined) {
-        warningText1.innerHTML = userId + " : " + text1.replace(/\n/g, '<br>');
+        warningText1.innerHTML = "아... " + userId + "님은... " + text1.replace(/\n/g, '<br>');
     } else {
         warningText1.innerHTML = "알 수 없는 오류가 발생했습니다.";
     }
@@ -115,8 +109,6 @@ function showWarningWindow(text1, text2) {
 
     warningWindow.style.display = 'block';
     container.style.filter = 'blur(20px)';
-
-    // hideWarningWindow를 여기서 제거했습니다.
 }
 
 // 경고창을 숨기는 함수
@@ -143,19 +135,6 @@ function noClickButton() {
             hideWarningWindow();
             nextQuestion();
         }, 4000);
-    }
-}
-
-// 데이터 가져오는 함수
-async function fetchData() {
-    try {
-        const response = await fetch('http://localhost/MIRIM_QUIZ/php/remember_name.php');
-        if (!response.ok) {
-            throw new Error('네트워크 응답에 문제가 있습니다.');
-        }
-        const data = await response.json();
-    } catch (error) {
-        console.error('데이터를 가져오는 중 문제가 발생했습니다:', error);
     }
 }
 
