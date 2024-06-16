@@ -1,6 +1,6 @@
 <?php
 // 디비접속
-// $conn = mysqli_connect('localhost', 'test', '1111', 'testdb', 3307);
+// $conn = mysqli_connect('localhost', 'root', '1234', 'mysql');
 $conn = mysqli_connect('localhost', 'test', 'Osb01166', 'testdb');
 
 // 사용자 입력 값 가져오기
@@ -61,7 +61,7 @@ if (isIdAvailable($conn, $id)) {
         
         // 회원가입 성공 시 menu.html 페이지로 이동
         echo "<script>alert('회원가입이 완료되었습니다.');</script>";
-        echo "<script>window.location.href = '../html/menu.html?id=$studentKey';</script>";
+        echo "<script>window.location.href = '../html/menu.html?id=$id';</script>";
     } else {
         // 회원가입 실패 시 실패 이유를 알림창에 표시
         echo "<script>alert('회원가입에 실패했습니다. 오류: " . mysqli_error($conn) . "');</script>";

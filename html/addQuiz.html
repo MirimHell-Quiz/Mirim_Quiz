@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -12,9 +11,10 @@
 
 <body>
     <h1 class="neon-text-1" id="quiz-add-text-h1">퀴즈 항목 추가</h1>
-    <h3 class="neon-text-2" id="quiz-add-text-h3">질문을 적어주시면 관계자들이 검토한 후 참고하도록 하겠습니다.</h5>
-     <form method="post" action="../php/addQuizInsert.php">
-
+    <h3 class="neon-text-2" id="quiz-add-text-h3">질문을 적어주시면 관계자들이 검토한 후 참고하도록 하겠습니다.</h3>
+    <form method="post" action="../php/addQuizInsert.php">
+        <!-- 숨겨진 입력 필드에 studentKey 값을 저장 -->
+        <input type="hidden" id="studentKey" name="studentKey" value="">
 
         <!-- 질문 입력 칸 -->
         <input type="text" id="question" class="neon-div-2" name="question" placeholder="질문을 입력해주세요." required>
@@ -30,6 +30,17 @@
 
         <br><button type="submit" id="quiz-add-button" class="neon-div-1 neon-text-2">추가하기</button>
     </form> 
+
+    <script>
+        // URL에서 id 값을 추출하는 함수
+        function getStudentKey() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        // 숨겨진 입력 필드에 studentKey 값 설정
+        document.getElementById('studentKey').value = getStudentKey();
+    </script>
 </body>
 
 </html>

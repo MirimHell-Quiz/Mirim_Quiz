@@ -23,8 +23,17 @@
     </div>
 
     <script>
+        // URL에서 id 값을 추출하는 함수
+        function getStudentKey() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('userid');
+        }
+
+        // id 값을 추출
+        const studentKey = getStudentKey();
+
         function moveReturning(){
-            window.location.href="../html/Menu.html"; // 돌아가기 페이지 링크
+            window.location.href = `../html/Menu.html?id=${studentKey}`; // 돌아가기 페이지 링크
         }
     </script>
 </body>

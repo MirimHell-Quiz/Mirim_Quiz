@@ -20,8 +20,23 @@
     <div class="button-div">
         <button type="submit" class="final-button neon-div-1 neon-text-2" onclick="location.href='Review.html'">후기 보기</button>
         <button type="submit" class="final-button neon-div-1 neon-text-2" onclick="location.href='finish.html'">끝내기</button>
-        <button type="submit" class="final-button neon-div-1 neon-text-2" onclick="location.href='addQuiz.html'">질문 추가</button>
+        <button button onclick="moveQuestion()" type="submit" class="final-button neon-div-1 neon-text-2">질문 추가</button>
     </div>
+
+    <script>
+        // URL에서 id 값을 추출하는 함수
+        function getStudentKey() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('userId');
+        }
+
+        // id 값을 추출
+        const studentKey = getStudentKey();
+        
+        function moveQuestion() {
+            window.location.href = `../html/addQuiz.html?id=${studentKey}`; // 친구들의 질문 보기 링크  
+        }
+    </script>
 
 </body>
 <script src="../js/Result.js"></script>

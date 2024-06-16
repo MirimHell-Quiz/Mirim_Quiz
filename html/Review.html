@@ -38,7 +38,6 @@
             <div id="limitmessage"></div>   <!-- 경고문 -->
         </div>
 
-
         <div class="messagebox" id="messagebox">
           <!-- <div class="information neon-div-1">
             <div class="nicknamebox">
@@ -51,16 +50,37 @@
         </div>
     </div>
 
-
     <div class="moveBottomBtn">
         <img src="../src/img/down_button.png" alt="화면을 밑으로 내리는 버튼">
     </div>
 
     <div class="btnbox">
-        <button class="btns neon-div-1 neon-text-2" onclick="location.href='Result.html'">결과보기</button>
-        <button class="btns neon-div-1 neon-text-2" onclick="location.href='finish.html'">끝내기</button>
-        <button class="btns neon-div-1 neon-text-2" onclick="location.href='AddQuiz.html'">질문추가</button>
+        <button class="btns neon-div-1 neon-text-2" id="resultBtn">결과보기</button>
+        <button class="btns neon-div-1 neon-text-2" id="finishBtn">끝내기</button>
+        <button class="btns neon-div-1 neon-text-2" id="addQuizBtn">질문추가</button>
     </div>
+
+    <script>
+        // URL에서 studentKey 값을 추출하는 함수
+        function getStudentKey() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('id');
+        }
+
+        const studentKey = getStudentKey();
+
+        document.getElementById('resultBtn').onclick = function() {
+            location.href = `Result.html?id=${studentKey}`;
+        };
+
+        document.getElementById('addQuizBtn').onclick = function() {
+            location.href = `AddQuiz.html?id=${studentKey}`;
+        };
+
+        document.getElementById('finishBtn').onclick = function() {
+            location.href = 'finish.html';
+        };
+    </script>
     <script src="../js/Review.js"></script>
 </body>
 </html>
