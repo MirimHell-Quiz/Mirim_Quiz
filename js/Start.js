@@ -9,7 +9,7 @@ const studentKey = getStudentKey();
 
 document.querySelector('.start').addEventListener('click', function () {
     // ID 1로 퀴즈 시작 페이지로 이동
-    window.location.href = `../php/remember_name.php?id=${studentKey}`;
+    window.location.href = `../html/quiz.html?id=${studentKey}`;
 });
 
 document.querySelector('.back').addEventListener('click', function () {
