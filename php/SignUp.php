@@ -1,7 +1,8 @@
 <?php
 // 디비접속
 // $conn = mysqli_connect('localhost', 'root', '1234', 'mysql');
-$conn = mysqli_connect('localhost', 'test', 'Osb01166', 'testdb');
+// $conn = mysqli_connect('localhost', 'test', 'Osb01166', 'testdb');
+include_once("./db_conn.php");
 
 // 사용자 입력 값 가져오기
 $id = mysqli_real_escape_string($conn, $_POST['user_id']);
@@ -65,10 +66,12 @@ if (isIdAvailable($conn, $id)) {
     } else {
         // 회원가입 실패 시 실패 이유를 알림창에 표시
         echo "<script>alert('회원가입에 실패했습니다. 오류: " . mysqli_error($conn) . "');</script>";
+        echo "<script>window.location.href = '../html/login.html';</script>";
     }
 } else {
     // ID가 중복된 경우 알림창에 표시
     echo "<script>alert('회원가입에 실패했습니다. 오류: 중복된 ID입니다.');</script>";
+    echo "<script>window.location.href = '../html/login.html';</script>";
 }
 
 // 데이터베이스 연결 해제

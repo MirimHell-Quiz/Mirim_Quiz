@@ -18,19 +18,10 @@
         <div class="inputbox neon-div-1">
 
             <div class="user-div-all">
-                <div class="user-div number">
-                    <div class="user-div-1 neon-div-1 neon-text-2">학번</div>
-                    <div class="user-div-2 neon-div-1 neon-text-2">1111</div>
-                </div>
     
-                <div class="user-div name">
-                    <div class="user-div-1 neon-div-1 neon-text-2">성명</div>
-                    <div class="user-div-2 neon-div-1 neon-text-2">김땡땡</div>
-                </div>
-    
-                <div class="user-div nickname">
+                <div class="user-div">
                     <div class="user-div-1 neon-div-1 neon-text-2">닉네임</div>
-                    <div class="user-div-2 neon-div-1 neon-text-2">잠자는 두루미</div>
+                    <div class="nickname user-div-2 neon-div-1 neon-text-2" id="nickname">잠자는 두루미</div>
                 </div>
             </div>
 
@@ -61,25 +52,7 @@
     </div>
 
     <script>
-        // URL에서 studentKey 값을 추출하는 함수
-        function getStudentKey() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('id');
-        }
 
-        const studentKey = getStudentKey();
-
-        document.getElementById('resultBtn').onclick = function() {
-            location.href = `Result.html?id=${studentKey}`;
-        };
-
-        document.getElementById('addQuizBtn').onclick = function() {
-            location.href = `AddQuiz.html?id=${studentKey}`;
-        };
-
-        document.getElementById('finishBtn').onclick = function() {
-            location.href = 'finish.html';
-        };
     </script>
     <script src="../js/Review.js"></script>
 </body>
