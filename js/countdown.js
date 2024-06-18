@@ -57,18 +57,27 @@ function showContainerDiv() {
     containerDiv.style.display = 'block';
 }
 
+// 경고 창의 표시 여부를 감지하여 오디오를 제어하는 함수
+function observeWarningWindow() {
+    const warningWindow = document.querySelector('.warning-window-div-1');
+
+    const observer = new MutationObserver((mutationsList) => {
+        for (let mutation of mutationsList) {
+            if (mutation.attributeName === 'style') {
+                const isDisplayed = window.getComputedStyle(warningWindow).display !== 'none';
+                if (isDisplayed) {
+                    stopCountdownAndAudio();
+                } else {
+                    resetCountdownAndAudio();
+                }
+            }
+        }
+    });
+
+    observer.observe(warningWindow, { attributes: true });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     autoStart();
-
-    const buttons = document.querySelectorAll('.container-button button');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            stopCountdownAndAudio();
-            showContainerDiv();
-        });
-    });
-
-    document.querySelector('.warning-window-div-1').addEventListener('click', () => {
-        resetCountdownAndAudio();
-    });
+    observeWarningWindow();
 });
