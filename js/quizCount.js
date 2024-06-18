@@ -173,3 +173,4 @@ document.querySelector("#button-group1 .button3").addEventListener("click", func
 document.querySelector("#button-group2 .button4").addEventListener("click", function() {
     submitAnswer(4);
 });
+

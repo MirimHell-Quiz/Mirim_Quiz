@@ -16,6 +16,9 @@
     display: none;
 }
 
+body{
+    cursor: pointer;
+}
 
 .guide-div, .logo-div {
     top: 50%;
