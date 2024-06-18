@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // userID에 맞는 닉네임을 필터링합니다.
-        const user = userData.find(data => data.StudentKey == userID);
+        const user = userData.find(data => data.Userid == userID);
 
         if (!user) {
             console.error('No matching user data found for the given student key.');
