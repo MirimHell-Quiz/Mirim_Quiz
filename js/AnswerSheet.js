@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const userDivNumber = document.createElement('div');
         userDivNumber.classList.add('user-div', 'number');
         userDivNumber.innerHTML = `
-            <div class="user-div-1 neon-div-1 neon-text-2">학번</div>
+            <div class="user-div-1 neon-div-1 neon-text-2">아이디</div>
             <div class="user-div-2 neon-div-1 neon-text-2">${userAnswers.Answerid}</div>
         `;
 
@@ -107,7 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     resultText.style.color = '#000000';
                     result.style.boxShadow = '0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47)';
                 } else {
-                    resultText.style.color = '#FFFFFF';
+                    resultText.style.color = '#FFF0F0';
+                    result.style.textShadow = '0 0 .2rem #fff, 0 0 .2rem #fff, 0 0 2rem rgb(244, 0, 0, 0.47), 0 0 0.8rem rgb(244, 0, 0, 0.47), 0 0 2.8rem rgb(244, 0, 0, 0.47)';
                 }
 
                 result.appendChild(resultText);

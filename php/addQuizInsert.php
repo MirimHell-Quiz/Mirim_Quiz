@@ -37,5 +37,5 @@ if (mysqli_query($conn, $sql)) {
 }
 
 // studentKey 값을 Review.html로 전달
-echo "<meta http-equiv='refresh' content='0;url=../html/Review.html?id=$studentKey'>";
+echo "<meta http-equiv='refresh' content='0;url=../html/Finish.html'>";
 ?>

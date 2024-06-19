@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 containerText.appendChild(problemText);
 
-                questionAndTextDiv.appendChild(questionTitle);
+                // questionAndTextDiv.appendChild(questionTitle);
                 questionAndTextDiv.appendChild(containerText);
 
                 const resultDiv = document.createElement('div');
