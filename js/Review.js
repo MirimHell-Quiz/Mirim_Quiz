@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const nickname = getNickName();
 
+    console.log(nickname);
+
     // 추출한 닉네임을 HTML에 삽입하는 함수
     function setNickname(nickname) {
         const nicknameElement = document.getElementById('nickname');
@@ -86,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 서버에서 리뷰 데이터를 가져오는 함수
     function fetchReviews() {
-        fetch('../php/fetch_reviews.php')
+        fetch('http://localhost/MIRIM_QUIZ/php/fetch_reviews.php')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -127,11 +129,11 @@ document.addEventListener("DOMContentLoaded", function() {
     fetchReviews();
 
     document.getElementById('resultBtn').onclick = function() {
-        location.href = `Result.html?id=${studentKey}`;
+        location.href = `Result.html?id=${nickname}`;
     };
 
     document.getElementById('addQuizBtn').onclick = function() {
-        location.href = `AddQuiz.html?id=${studentKey}`;
+        location.href = `AddQuiz.html?id=${nickname}`;
     };
 
     document.getElementById('finishBtn').onclick = function() {
