@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         // 사용자 정보가 일치하지 않는 경우, 로그인 실패
         echo "<script>alert('로그인에 실패했습니다.');</script>";
+        echo "<script>window.location.href = '../html/login.html';</script>";
     }
 }
 
