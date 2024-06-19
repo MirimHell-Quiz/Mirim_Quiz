@@ -22,6 +22,20 @@ document.addEventListener("DOMContentLoaded", function() {
     // 닉네임 설정
     setNickname(nickname);
 
+    // 사용자 ID를 가져오는 함수
+    function fetchUserId(nickname, callback) {
+        fetch(`../php/getuser_id.php?nickname=${nickname}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.id) {
+                    callback(data.id);
+                } else {
+                    console.error('Error fetching user ID:', data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
     // 버튼 클릭 시 페이지 하단으로 이동
     $bottomBtn.onclick = () => {
         window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
@@ -128,14 +142,21 @@ document.addEventListener("DOMContentLoaded", function() {
     // 페이지 로드 시 리뷰 데이터를 가져옵니다
     fetchReviews();
 
+    // Result 페이지로 이동
     document.getElementById('resultBtn').onclick = function() {
-        location.href = `Result.html?id=${nickname}`;
+        fetchUserId(nickname, function(userId) {
+            location.href = `Result.html?id=${userId}`;
+        });
     };
 
+    // AddQuiz 페이지로 이동
     document.getElementById('addQuizBtn').onclick = function() {
-        location.href = `AddQuiz.html?id=${nickname}`;
+        fetchUserId(nickname, function(userId) {
+            location.href = `AddQuiz.html?id=${userId}`;
+        });
     };
 
+    // Finish 페이지로 이동
     document.getElementById('finishBtn').onclick = function() {
         location.href = 'finish.html';
     };

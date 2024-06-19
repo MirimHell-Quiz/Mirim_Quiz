@@ -12,8 +12,6 @@ if (!$conn) {
 
 // JSON 데이터 수신
 $json = file_get_contents('php://input');
-
-
 $data = json_decode($json, true);
 
 // 데이터 확인
